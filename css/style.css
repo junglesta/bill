@@ -87,6 +87,7 @@ table td, table th {
   border: 1px solid #000;
   margin-top: 0px;
   max-height: 125px;
+	cursor: pointer;
 }
 
 #logoctr {
@@ -98,6 +99,7 @@ table td, table th {
   text-align: right;
   background: #eee;
   padding: 0 5px;
+	cursor: pointer;
 }
 
 #logohelp {
@@ -233,6 +235,7 @@ textarea.cost {
 
 textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover {
   background-color: #EEFF88;
+	cursor: pointer;
 }
 
 .delete-wpr {
@@ -244,10 +247,10 @@ textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.
   color: #000;
   text-decoration: none;
   position: absolute;
-  background: #EEEEEE;
+  background: #eee;
   padding: 2px;
-  border: 1px solid;
-  top: 10px;
+  border: 1px solid #ccc;
+  top: 0;
   left: -36px;
   font-size: 16px;
   border-radius: 50%;
@@ -259,23 +262,30 @@ textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.
 	text-align: center;
 }
 
+.delete-wpr .delete:hover {
+	background: #ddd;
+}
+
 .addrow {
   display: block;
   width: 100%;
 }
 
 .hiderow {
+
   background: #EEFF88;
 }
 
 .hiderow:hover {
   color: #EEFF88;
+	cursor: pointer;
 
 }
 
 .hiderow:hover .addrow {
   color: #EEFF88;
 	background: black;
+	cursor: pointer;
 }
 
 .invoice_logo {
@@ -295,6 +305,7 @@ table th,
 #logo:hover {
   background-color: transparent!important;
   border: 0 none;
+	cursor: pointer;
 }
 
 table#items th,
@@ -307,6 +318,9 @@ table#meta td {
   border-bottom: 1px solid hsla(0, 0%, 80%, 1);
 }
 
+.qty {
+	min-width: 14px;
+}
 
 /*print styles: loading print.css now!*/
 
