@@ -1,6 +1,6 @@
 ## Bill is an on the fly invoice generator
 
-### try it here bill.junglestar.org
+### try it here [bill.junglestar.org](https://bill.junglestar.org)
 
 Just enter your invoice data and save to pdf using Crome for Example
 
