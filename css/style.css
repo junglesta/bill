@@ -318,8 +318,9 @@ table#meta td {
   border-bottom: 1px solid hsla(0, 0%, 80%, 1);
 }
 
-.qty {
-	min-width: 14px;
+.qty,
+.paid {
+  min-width: 60px;
 }
 
 /*print styles: loading print.css now!*/

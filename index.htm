@@ -34,8 +34,8 @@
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-		<meta name="apple-mobile-web-app-title" content="Bill Paid!">
-		<meta name="application-name" content="Bill Paid!">
+		<meta name="apple-mobile-web-app-title" content="Send Bill!">
+		<meta name="application-name" content="Send Bill!">
 		<meta name="msapplication-TileColor" content="#000000">
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 		<meta name="theme-color" content="#000000">
@@ -53,11 +53,11 @@
 			<div id="identity">
 
 				<textarea id="address">
-					YourCompany
-					Street Address
-					City State 12345
-					P: (123) 456-7890
-					youremailaddress@email.com
+YourCompany
+Street Address
+City State 12345
+P: (123) 456-7890
+youremailaddress@email.com
 				</textarea>
 
 				<div id="logo">
@@ -91,22 +91,27 @@
 
 			<div id="customer">
 
-				<textarea id="customer-title">YourClientCompany
-					Street Address
-					City State 12345
-					P: (123) 456-7890
-					yourclientaddress@email.com
+				<textarea id="customer-title">
+YourClientCompany
+Street Address
+City State 12345
+P: (123) 456-7890
+yourclientaddress@email.com
 				</textarea>
 
 				<table id="meta">
 					<tr>
 						<td class="meta-head">Invoice #</td>
-						<td><textarea>000123</textarea></td>
+						<td>
+							<textarea>000123</textarea>
+						</td>
 					</tr>
 					<tr>
 
 						<td class="meta-head">Date</td>
-						<td><textarea id="date">September 19, 2017</textarea></td>
+						<td>
+							<textarea id="date">September 19, 2017</textarea>
+						</td>
 					</tr>
 					<tr>
 						<td class="meta-head">Amount Due</td>
@@ -131,12 +136,23 @@
 
 				<tr class="item-row">
 					<td class="item-name">
-						<div class="delete-wpr"><textarea>Web Updates</textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div>
+						<div class="delete-wpr">
+							<textarea>Web Updates</textarea>
+							<a class="delete" href="javascript:;" title="Remove row">X</a>
+						</div>
 					</td>
-					<td class="description"><textarea>Monthly web updates for http://paradiseholiday.com (Nov. 1 - Nov. 30, 2017)</textarea></td>
-					<td><textarea class="cost">$330.00</textarea></td>
-					<td><textarea class="qty">1</textarea></td>
-					<td><span class="price">$330.00</span></td>
+					<td class="description">
+						<textarea>Monthly web updates for http://paradiseholiday.com (Nov. 1 - Nov. 30, 2017)</textarea>
+					</td>
+					<td>
+						<textarea class="cost">$330.00</textarea>
+					</td>
+					<td>
+						<textarea class="qty">1</textarea>
+					</td>
+					<td>
+						<span class="price">$330.00</span>
+					</td>
 				</tr>
 
 				<tr class="item-row">
@@ -171,7 +187,9 @@
 				<tr>
 					<td colspan="2" class="blank"> </td>
 					<td colspan="2" class="total-line">Amount Paid</td>
-					<td class="total-value"><textarea id="paid">$0.00</textarea></td>
+					<td class="total-value">
+						<textarea id="paid" class="paid">$0.00</textarea>
+					</td>
 				</tr>
 				<tr>
 					<td colspan="2" class="blank"> </td>
@@ -185,7 +203,7 @@
 
 			<div id="terms">
 				<h5>Notes</h5>
-				<textarea>Paid.</textarea>
+				<textarea>Waiting payment. Every month after 30 days will incur in 5% late payment extra fee.</textarea>
 			</div>
 
 		</div>
@@ -289,6 +307,7 @@
 			function bind() {
 				$(".cost").blur(update_price);
 				$(".qty").blur(update_price);
+				$("#paid").blur(update_balance);
 			}
 
 			$(document).ready(function() {
