@@ -18,8 +18,8 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-#page-wrap {
-  max-width: 800px;
+#wrap {
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -39,6 +39,9 @@ textarea {
   overflow: hidden;
   resize: none;
   font-size: inherit;
+  font-family: Helvetica;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 table {
@@ -208,6 +211,7 @@ textarea.cost {
 #items td.total-value {
   border-left: 0;
   padding: 10px;
+  min-width: 80px;
 }
 
 #items td.total-value textarea {
@@ -227,6 +231,7 @@ textarea.cost {
   text-align: center;
   padding: 20px 0 0 0;
   border-top: 1px solid black;
+  padding-bottom: 4rem;
 }
 
 #terms h5 {
@@ -275,7 +280,7 @@ textarea:focus,
   text-align: center;
 }
 
-.delete-wpr .delete:hover {
+.item-row:hover .delete {
   background: #ddd;
 }
 
@@ -289,13 +294,14 @@ textarea:focus,
 }
 
 .hiderow:hover {
-  color: #eeff88;
+  /*color: #eeff88;*/
   cursor: pointer;
 }
 
 .hiderow:hover .addrow {
-  color: #eeff88;
-  background: black;
+  visibility: visible;
+  color: black;
+  background: #eeff88;
   cursor: pointer;
 }
 
@@ -328,11 +334,34 @@ table#meta td {
   border-bottom: 1px solid hsla(0, 0%, 80%, 1);
 }
 
-.qty,
-.paid {
-  min-width: 60px;
+#items tr:last-child {
+  border-bottom: 0 none;
 }
 
+.qty,
+.paid {
+  min-width: 80px;
+}
+
+.bottom_nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+.bottom_nav a {
+  display: block;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+.bottom_nav:hover {
+  background-color: green;
+}
 /*print styles: loading print.css now!*/
 @media print {
 }
