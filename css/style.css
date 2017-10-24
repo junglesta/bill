@@ -346,11 +346,12 @@ table#meta td {
 .bottom_nav {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 10%;
+  width: 80%;
   height: 50px;
   background-color: black;
 }
+
 .bottom_nav a {
   display: block;
   color: white;
@@ -362,6 +363,44 @@ table#meta td {
 .bottom_nav:hover {
   background-color: green;
 }
+.help {
+  position: static;
+  top: 0;
+  right: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  height: 50px;
+  background-color: red;
+}
+
+.help a {
+  display: block;
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 840px) {
+  .help {
+    position: fixed;
+    z-index: 100;
+    top: 2rem;
+    right: 2rem;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  .help a {
+    display: block;
+    color: white;
+    font-size: 20px;
+    line-height: 75px;
+    text-align: center;
+  }
+}
+
 /*print styles: loading print.css now!*/
 @media print {
 }
