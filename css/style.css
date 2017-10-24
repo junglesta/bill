@@ -1,7 +1,6 @@
 /*
 	hacked on:
-	CSS-Tricks Example
-	by Chris Coyier
+	CSS-Tricks Example by Chris Coyier
 	http://css-tricks.com
 */
 
@@ -11,11 +10,12 @@
 }
 
 body {
-	margin: 0 2rem;
+  margin: 0 2rem;
   font-size: 14px;
-	line-height: 1.2;
-	font-weight: 300;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  line-height: 1.2;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #page-wrap {
@@ -38,15 +38,16 @@ textarea {
   border: 0;
   overflow: hidden;
   resize: none;
-	font-size: inherit;
+  font-size: inherit;
 }
 
 table {
   border-collapse: collapse;
-	text-align: left;
+  text-align: left;
 }
 
-table td, table th {
+table td,
+table th {
   border: 1px solid black;
   padding: 5px;
 }
@@ -83,23 +84,25 @@ table td, table th {
   overflow: hidden;
 }
 
-#logo:hover, #logo.edit {
+#logo:hover,
+#logo.edit {
   border: 1px solid #000;
   margin-top: 0px;
   max-height: 125px;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #logoctr {
   display: none;
 }
 
-#logo:hover #logoctr, #logo.edit #logoctr {
+#logo:hover #logoctr,
+#logo.edit #logoctr {
   display: block;
   text-align: right;
   background: #eee;
   padding: 0 5px;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #logohelp {
@@ -117,11 +120,16 @@ table td, table th {
   display: block;
 }
 
-.edit #save-logo, .edit #cancel-logo {
+.edit #save-logo,
+.edit #cancel-logo {
   display: inline;
 }
 
-.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo {
+.edit #image,
+#save-logo,
+#cancel-logo,
+.edit #change-logo,
+.edit #delete-logo {
   display: none;
 }
 
@@ -170,7 +178,7 @@ table td, table th {
 }
 
 textarea.cost {
-	min-width: 80px;
+  min-width: 80px;
 }
 
 #items tr.item-row td {
@@ -186,14 +194,15 @@ textarea.cost {
   width: 20%;
 }
 
-#items td.description textarea, #items td.item-name textarea {
+#items td.description textarea,
+#items td.item-name textarea {
   width: 100%;
 }
 
 #items td.total-line {
   border-right: 0;
   text-align: right;
-	font-weight: bold;
+  font-weight: bold;
 }
 
 #items td.total-value {
@@ -217,7 +226,7 @@ textarea.cost {
 #terms {
   text-align: center;
   padding: 20px 0 0 0;
-	border-top: 1px solid black;
+  border-top: 1px solid black;
 }
 
 #terms h5 {
@@ -233,9 +242,13 @@ textarea.cost {
   text-align: center;
 }
 
-textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover {
-  background-color: #EEFF88;
-	cursor: pointer;
+textarea:hover,
+textarea:focus,
+#items td.total-value textarea:hover,
+#items td.total-value textarea:focus,
+.delete:hover {
+  background-color: #eeff88;
+  cursor: pointer;
 }
 
 .delete-wpr {
@@ -254,16 +267,16 @@ textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.
   left: -36px;
   font-size: 16px;
   border-radius: 50%;
-	width: 28px;
-	height: 28px;
-	max-width: 24px;
-	max-height: 24px;
-	line-height: 24px;
-	text-align: center;
+  width: 28px;
+  height: 28px;
+  max-width: 24px;
+  max-height: 24px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .delete-wpr .delete:hover {
-	background: #ddd;
+  background: #ddd;
 }
 
 .addrow {
@@ -272,26 +285,23 @@ textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.
 }
 
 .hiderow {
-
-  background: #EEFF88;
+  background: #eeff88;
 }
 
 .hiderow:hover {
-  color: #EEFF88;
-	cursor: pointer;
-
+  color: #eeff88;
+  cursor: pointer;
 }
 
 .hiderow:hover .addrow {
-  color: #EEFF88;
-	background: black;
-	cursor: pointer;
+  color: #eeff88;
+  background: black;
+  cursor: pointer;
 }
 
 .invoice_logo {
   width: 100px;
 }
-
 
 /*cleaner style*/
 table,
@@ -303,9 +313,9 @@ table th,
 #items,
 #meta td.meta-head,
 #logo:hover {
-  background-color: transparent!important;
+  background-color: transparent !important;
   border: 0 none;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 table#items th,
@@ -324,7 +334,5 @@ table#meta td {
 }
 
 /*print styles: loading print.css now!*/
-
 @media print {
-
 }

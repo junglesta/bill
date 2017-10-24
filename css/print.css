@@ -1,6 +1,12 @@
-@page { margin: 0; }
-body { margin: 2cm; }
-#logoctr a {display: none;}
+@page {
+  margin: 0;
+}
+body {
+  margin: 2cm;
+}
+#logoctr a {
+  display: none;
+}
 
 *,
 table,
@@ -12,16 +18,16 @@ table th,
 #items,
 #meta td.meta-head,
 #logo:hover {
-  background-color: transparent!important;
+  background-color: transparent !important;
   border: 0 none;
 }
 #hiderow,
 .delete-wpr a.delete {
-  display: none!important;
+  display: none !important;
 }
 table th,
 table tr,
-tbody th{
+tbody th {
   border: 0 none;
 }
 table#items th,
