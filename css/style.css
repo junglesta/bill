@@ -370,7 +370,7 @@ table#meta td {
   width: 80%;
   margin: 0 auto;
   height: 50px;
-  background-color: red;
+  background-color: #0069cc;
 }
 
 .help a {
@@ -389,7 +389,7 @@ table#meta td {
     right: 2rem;
     width: 80px;
     height: 80px;
-    background-color: red;
+    background-color: #0069cc;
     border-radius: 50%;
   }
   .help a {
