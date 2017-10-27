@@ -3,6 +3,7 @@
 }
 body {
   margin: 2cm;
+  color: red;
 }
 #logoctr a {
   display: none;

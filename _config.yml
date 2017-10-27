@@ -1,0 +1,50 @@
+title: bill
+subtitle: Make an invoice and download it!
+description: > # this means to ignore newlines until "baseurl:"
+  Quick and simple. Make an invoice and download it!
+keywords: invoice, webapp, single-page, responsive, guided tour, secure, downloadable pdf,
+lang: en_US
+version: 2.0.0
+
+baseurl: ""
+url: "https:/bill.junglestar.org"
+
+company:
+  name: Junglestar
+  email: info@junglestar.org
+
+
+# SEO https://jekyll.github.io/jekyll-seo-tag/usage/
+# SEO tag will use the YAML front matter if included in a post, page, or document:
+#
+# title
+# description
+# image - (e.g., /assets/page-pic.jpg)
+# author - Page-specific author (see below)
+# lang - Page-specific language
+author: rokma
+twitter:
+  username: rokmatwit
+facebook:
+  app_id: #Facebook app ID for Facebook insights
+  publisher: #Facebook page URL or ID of the publishing entity
+  admins: #Facebook user ID for domain insights linked to a personal account
+logo: /assets/favicons/apple-touch-icon-152x152.png
+
+google:
+  analytics: UA-108493876-1
+  verification:
+
+# Build settings
+markdown: kramdown
+plugins:
+ - jekyll-seo-tag
+ - html-proofer
+exclude:
+  - Gemfile.lock
+  - node_modules
+  - package-lock.json
+  - Gemfile
+  - rakefile
+
+permalink: /:title/ # pretty

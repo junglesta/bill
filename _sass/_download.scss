@@ -1,0 +1,32 @@
+//overriding styles used by JS when downloadPdf is launched
+
+/*download invoice styles*/
+body {
+  pading: 0 2rem;
+}
+
+body,
+textarea {
+  font-family: Helvetica, sans-serif;
+  font-size: $base_font-size--tiny;
+}
+* {
+  color: black!important;
+}
+
+#hiderow,
+.delete {
+  display: none!important;
+}
+
+.meta {
+  width: 300px;
+}
+.sums .row {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+// .totalprice {
+//   text-align: right;
+// }

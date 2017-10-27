@@ -1,0 +1,60 @@
+
+#logo {
+  text-align: right;
+  float: right;
+  position: relative;
+  max-width: 500px;
+  max-height: 180px;
+  overflow: hidden;
+  display: none;
+  @include media( "screen", ">bp1Width") {
+    display: block;
+  }
+}
+
+#logo.edit,
+#logo:hover {
+  border: 1px solid $grey;
+  margin-top: 0;
+  max-height: 125px;
+  cursor: pointer;
+}
+
+#logoctr {
+  display: none;
+}
+
+#logo.edit #logoctr,
+#logo:hover #logoctr {
+  display: block;
+  text-align: right;
+  padding: 0 $spacing/3;
+  cursor: pointer;
+}
+
+#logohelp {
+  text-align: left;
+  display: none;
+  padding: $spacing/3*2 $spacing/3;
+
+  input {
+    margin-bottom: $spacing/3;
+  }
+
+  .edit & {
+    display: block;
+  }
+}
+
+.edit #cancel-logo,
+.edit #save-logo {
+  display: inline;
+}
+
+#cancel-logo,
+#save-logo,
+.edit #change-logo,
+.edit #delete-logo,
+.edit #image {
+  display: none;
+}

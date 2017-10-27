@@ -1,0 +1,235 @@
+//styles for proper PRINT command, like when its run as a browsers command
+/* hacked on: CSS-Tricks Example by Chris Coyier http://css-tricks.com */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 $spacing;
+  line-height: $base_line_height;
+  font-weight: $font_weight--base;
+  font-family: $font_family;
+  font-size: $base_font_size--tiny;
+  @include media( "screen", ">minWidth") {
+    font-size: $base_font-size--min;
+  }
+  @include media( "screen", ">bp1Width") {
+    font-size: $base_font-size--bp1;
+    margin: 0 $spacing*2;
+  }
+  @include media( "screen", ">maxWidth") {
+    font-size: $base_font-size--max;
+  }
+}
+
+#download_invoice_block {
+  max-width: $mediaBp1Width;
+  margin: 0 auto;
+  padding: 0 $spacing;
+}
+
+a {
+  text-decoration: none;
+  color: $alert_color;
+  padding: 1px;
+}
+
+textarea {
+  border: 0;
+  overflow: hidden;
+  resize: none;
+  font-size: inherit;
+  font-family: $font_family;
+  font-weight: $font_weight--base;
+  line-height: $base_line_height;
+  display: block;
+  width: auto;
+}
+
+.header {
+  font-weight: $font_weight--bold;
+  height: $spacing*2;
+  width: 100%;
+  margin: $spacing 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+  padding: $spacing/2;
+}
+
+.header_wrap {
+  border-bottom: 1px solid $black;
+  margin-bottom: $spacing;
+}
+
+.customer_data,
+.own_data {
+  float: left;
+  height: 150px;
+  min-width: 300px;
+  padding-bottom: $spacing;
+}
+
+#customer {
+  overflow: hidden;
+}
+
+.total-line {
+  border-right: 0;
+  text-align: right;
+  font-weight: $font_weight--bold;
+  @include media( "screen", ">minWidth") {
+    text-align: left;
+  }
+
+  .amount_paid & {
+    color: $alert_color;
+  }
+}
+
+.col.total-value {
+  border-left: 0;
+  padding: 10px 0;
+
+  textarea {
+    height: 20px;
+    background: none;
+    text-align: right;
+  }
+}
+
+.col.blank {
+  width: 100%;
+}
+
+.notes {
+  text-align: center;
+  border-top: 1px solid $black;
+  padding-bottom: 4rem;
+
+  h5 {
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    padding: 8px 0;
+    margin: 0 0 8px;
+  }
+
+  textarea {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.col.total-value textarea:focus,
+.col.total-value textarea:hover,
+.delete:hover,
+textarea:focus,
+textarea:hover {
+  background-color: $alert_color--light;
+  cursor: pointer;
+}
+
+.delete_wrap {
+  position: absolute;
+  bottom: 6px;
+  right: 18px;
+}
+
+.delete_wrap .delete {
+  display: block;
+  color: $alert_color;
+  text-decoration: none;
+  padding: 2px;
+  border: 1px solid $alert_color;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  line-height: 24px;
+  text-align: center;
+}
+
+#hiderow .no_tag {
+  position: relative;
+
+  .addrow:before {
+    content: "+";
+    display: inline-block;
+    color: $alert_color;
+    text-decoration: none;
+    position: absolute;
+    padding: 2px;
+    border: 1px solid $alert_color;
+    top: -2px;
+    right: 0;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.addrow {
+  //a
+  display: block;
+  min-width: 100%;
+  //background: $alert_color--light;
+}
+
+.hiderow {
+
+  &:hover {
+    cursor: pointer;
+
+    .addrow {
+      visibility: visible;
+      color: black;
+      background: $alert_color--light;
+    }
+  }
+}
+
+.invoice_logo {
+  width: 100px;
+}
+
+.bottom_nav {
+  position: fixed;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 50px;
+  background-color: black;
+
+  a {
+    display: block;
+    color: white;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: $alert_color;
+  }
+}
+
+.sums {
+  margin-top: 1rem;
+  @include media( "screen", ">minWidth") {
+    .blank {
+      display: none;
+    }
+  }
+}
+
+.price {
+  white-space: nowrap;
+}

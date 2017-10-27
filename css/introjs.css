@@ -91,7 +91,8 @@ tr.introjs-showElement > th {
   background-color: rgba(255, 255, 255, 0);*/
   /*border: 16px solid white;*/
   border-radius: 4px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  /*box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);*/
+  outline: #0069cc 2px solid;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;

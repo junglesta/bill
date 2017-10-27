@@ -1,27 +1,15 @@
-/*
-	hacked on:
-	CSS-Tricks Example by Chris Coyier
-	http://css-tricks.com
-*/
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  margin: 0 0.2rem;
+  margin: 0 2rem;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 300;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-@media only screen and (min-width: 840px) {
-  body {
-    margin: 0 2rem;
-  }
 }
 
 #wrap {
@@ -51,6 +39,21 @@ textarea {
   display: block;
 }
 
+table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table td,
+table th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
 #header {
   height: 15px;
   width: 100%;
@@ -74,19 +77,7 @@ textarea {
 }
 
 #logo {
-  text-align: right;
-  float: right;
-  position: relative;
-  border: 1px solid #fff;
-  max-width: 500px;
-  max-height: 180px;
-  overflow: hidden;
   display: none;
-}
-@media only screen and (min-width: 840px) {
-  #logo {
-    display: block;
-  }
 }
 
 #logo:hover,
@@ -148,16 +139,9 @@ textarea {
 
 #meta {
   margin-top: 1px;
-  width: auto;
-  margin-top: 2rem;
+  width: 300px;
+  margin-top: 0;
   float: right;
-}
-
-@media only screen and (min-width: 840px) {
-  #meta {
-    width: 300px;
-    margin-top: 0;
-  }
 }
 
 #meta td {
@@ -201,11 +185,11 @@ textarea.cost {
 }
 
 #items td.description {
-  /*width: 50%;*/
+  width: 50%;
 }
 
 #items td.item-name {
-  /*width: 20%;*/
+  width: 20%;
 }
 
 #items td.description textarea,
@@ -213,15 +197,10 @@ textarea.cost {
   width: 100%;
 }
 
-.total-line {
+#items td.total-line {
   border-right: 0;
   text-align: right;
   font-weight: bold;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-.amount_paid .total-line {
-  color: #0069cc;
 }
 
 #items td.total-value {
@@ -239,8 +218,8 @@ textarea.cost {
   background: #eee;
 }
 
-td.blank {
-  width: 100%;
+#items td.blank {
+  border: 0;
 }
 
 #terms {
@@ -284,8 +263,8 @@ textarea:focus,
   background: #eee;
   padding: 2px;
   border: 1px solid #ccc;
-  top: -16px;
-  right: 12px;
+  top: 0;
+  left: -36px;
   font-size: 16px;
   border-radius: 50%;
   width: 28px;
@@ -294,36 +273,6 @@ textarea:focus,
   max-height: 24px;
   line-height: 24px;
   text-align: center;
-}
-
-#hiderow .no_tag {
-  position: relative;
-}
-
-#hiderow .no_tag .addrow:before {
-  content: "+";
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
-  position: absolute;
-  background: #eee;
-  padding: 2px;
-  border: 1px solid #ccc;
-  top: -16px;
-  right: 12px;
-  font-weight: 300;
-  font-size: 20px;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  max-width: 24px;
-  max-height: 24px;
-  line-height: 22px;
-  text-align: center;
-}
-
-.item-row {
-  position: relative;
 }
 
 .item-row:hover .delete {
@@ -335,24 +284,14 @@ textarea:focus,
   width: 100%;
 }
 
-.hiderow {
-  /*background: #eeff88;*/
-  background: #c2e1ff;
-}
-
-.hiderow:hover {
-  cursor: pointer;
-}
-
-.hiderow:hover .addrow {
-  visibility: visible;
-  color: black;
-  background: #c2e1ff;
-  cursor: pointer;
+.hiderow,
+.delete-wpr a.delete,
+#hiderow .no_tag .addrow:before {
+  display: none;
 }
 
 .invoice_logo {
-  width: 100px;
+  display: none;
 }
 
 /*cleaner style*/
@@ -384,162 +323,6 @@ table#meta td {
   border-bottom: 0 none;
 }
 
-table {
-  border-collapse: collapse;
-  text-align: left;
-}
-
-table th {
-  font-weight: bold;
-}
-
-table td,
-table th {
-  border-bottom: 1px solid hsla(0, 0%, 80%, 1);
-  padding: 5px;
-}
-
-@media (min-width: 600px) {
-  .five_col td:nth-of-type(1) {
-    width: 20%;
-    min-width: 20%;
-    max-width: 20%;
-  }
-  .five_col td:nth-of-type(2) {
-    width: 30%;
-    min-width: 30%;
-    max-width: 30%;
-  }
-  .five_col td:nth-of-type(3) {
-    width: 10%;
-    min-width: 10%;
-    max-width: 10%;
-  }
-  .five_col td:nth-of-type(4) {
-    width: 10%;
-    min-width: 10%;
-    max-width: 10%;
-  }
-  .five_col td:nth-of-type(5) {
-    width: 20%;
-    min-width: 20%;
-    max-width: 20%;
-  }
-}
-.responsive_table {
-  border-collapse: collapse;
-  table-layout: fixed;
-  width: 100%;
-}
-
-.responsive_table th {
-  color: #0069cc;
-  font-weight: 600;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-.responsive_table td {
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 0.35rem;
-}
-
-.responsive_table tr,
-.responsive_table td,
-.responsive_table th {
-  vertical-align: middle;
-}
-
-@media (max-width: 599px) {
-  td.total-line {
-    text-align: left;
-  }
-
-  .sums .blank {
-    display: none;
-  }
-  #items.responsive_table {
-    margin-top: 5rem;
-  }
-  .responsive_table table,
-  .responsive_table thead,
-  .responsive_table tbody,
-  .responsive_table th,
-  .responsive_table td,
-  .responsive_table tr {
-    display: block;
-  }
-
-  .responsive_table thead tr,
-  .responsive_table th {
-    display: none;
-  }
-
-  .responsive_table td {
-    border: none;
-    display: flex;
-    justify-content: flex-start;
-  }
-  #items.responsive_table td.description,
-  #items.responsive_table td.item-name {
-    width: auto;
-  }
-
-  #items.responsive_table textarea {
-    width: 70%;
-    max-width: 70%;
-  }
-
-  #items.responsive_table .item-row {
-    padding-bottom: 2rem;
-  }
-
-  .responsive_table .delete-wpr .delete {
-    right: -36px;
-    left: auto;
-    top: -23px;
-  }
-
-  .responsive_table td:before {
-    font-weight: bold;
-    margin-right: 0.5rem;
-    display: inline-block;
-    width: 30%;
-  }
-
-  .responsive_table td:nth-of-type(1):before {
-    content: "Item";
-    color: #0069cc;
-  }
-
-  .responsive_table .hiderow td:nth-of-type(1):before,
-  .responsive_table td.no_tag:before {
-    content: "";
-    display: none;
-  }
-
-  .responsive_table td:nth-of-type(2):before {
-    content: "Description";
-    color: #0069cc;
-  }
-
-  .responsive_table td:nth-of-type(3):before {
-    content: "Unit cost";
-    color: #0069cc;
-  }
-
-  .responsive_table td:nth-of-type(4):before {
-    content: "Quantity";
-    color: #0069cc;
-  }
-  .responsive_table td:nth-of-type(5):before {
-    content: "Price";
-    color: black;
-  }
-}
-
 .qty,
 .paid {
   min-width: 80px;
@@ -565,11 +348,6 @@ table th {
 .bottom_nav:hover {
   background-color: green;
 }
-
-.sums {
-  margin-top: 1rem;
-}
-
 .help {
   position: static;
   top: 0;
@@ -592,10 +370,10 @@ table th {
   .help {
     position: fixed;
     z-index: 100;
-    top: 1rem;
-    right: 1rem;
-    width: 60px;
-    height: 60px;
+    top: 2rem;
+    right: 2rem;
+    width: 80px;
+    height: 80px;
     background-color: #0069cc;
     border-radius: 50%;
   }
@@ -603,7 +381,7 @@ table th {
     display: block;
     color: white;
     font-size: 20px;
-    line-height: 60px;
+    line-height: 75px;
     text-align: center;
   }
 }

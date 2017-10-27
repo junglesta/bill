@@ -1,0 +1,49 @@
+/**
+* Conditional Media Query Mixin by @sheiko (http://dsheiko.com)
+* The problem this mixin solves is explained there
+* http://css-tricks.com/conditional-media-query-mixins/
+* https://github.com/dsheiko
+* MIT license: http://www.opensource.org/licenses/mit-license.php
+*/
+// Usage examples
+//  .sectio { background: silver;
+//  @include media( "screen", "<minWidth") {font-size: 1.2rem;}
+//  @include media( "screen", ">minWidth", "<bp1Width") {font-size: 1.2rem;}
+//  @include media( "screen", ">bp1Width", "<maxWidth" ) {font-size: 1.2rem;}
+//  @include media( "screen", ">maxWidth") {font-size: 1.2rem;}
+//  @include media( "retina" ) {background: yellow;};
+
+//// Predefined Break-points - defined in main.scss now!
+// $mediaMinWidth: 400px;
+// $mediaBp1Width: 800px;
+// $mediaMaxWidth: 1260px;
+
+@function translate-media-condition($c) {
+  $condMap: (
+    "screen": "only screen",
+    "print": "only print",
+    "retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+    ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
+    "<maxWidth": "(max-width: #{$mediaMaxWidth})",
+    ">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
+    "<bp1Width": "(max-width: #{$mediaBp1Width})",
+    ">minWidth": "(min-width: #{$mediaMinWidth + 1})",
+    "<minWidth": "(max-width: #{$mediaMinWidth})"
+  );
+  @return map-get( $condMap, $c );
+}
+
+// The media mixin
+@mixin media($args...) {
+  $query: "";
+  @each $arg in $args {
+    $op: "";
+    @if ($query != "") {
+      $op: " and ";
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query} {
+    @content;
+  }
+}
