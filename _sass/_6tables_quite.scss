@@ -1,38 +1,12 @@
-
-.total-line {
-  border-right: 0;
-  text-align: right;
-  font-weight: $font_weight--bold;
-  @include media( "screen", ">minWidth") {
-    text-align: left;
-  }
-
-  .amount_paid & {
-    color: $alert_color;
-  }
-}
-
-.col.total-value {
-  border-left: 0;
-  padding: 10px 0;
-
-  textarea {
-    height: 20px;
-    background: none;
-    text-align: right;
-    width: 100%;
-  }
-}
-
-.col.blank {
-  width: 100%;
-}
-
-
 .table {
   text-align: left;
-  display: table;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   .header_row .col {
     font-weight: $font_weight--bold;
@@ -40,14 +14,19 @@
 
   .row {
     position: relative;
-    display: table-row;
-  }
-
-  .col {
-    display: table-cell;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     border-bottom: 1px solid $grey;
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+
+  .col {
     width: auto;
     margin-right: $spacing;
   }
@@ -77,7 +56,6 @@
   }
 
   .totalprice {
-    position: relative;
     width: 130px;
     max-width: 130px;
     text-align: right;
@@ -146,7 +124,6 @@
   }
 }
 
-.col_span_all {
-  column-span: all;
-  //width: 100%!important;
+.colspan-5 {
+  width: 100%!important;
 }

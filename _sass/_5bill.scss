@@ -75,33 +75,6 @@ textarea {
   overflow: hidden;
 }
 
-.total-line {
-  border-right: 0;
-  text-align: right;
-  font-weight: $font_weight--bold;
-  @include media( "screen", ">minWidth") {
-    text-align: left;
-  }
-
-  .amount_paid & {
-    color: $alert_color;
-  }
-}
-
-.col.total-value {
-  border-left: 0;
-  padding: 10px 0;
-
-  textarea {
-    height: 20px;
-    background: none;
-    text-align: right;
-  }
-}
-
-.col.blank {
-  width: 100%;
-}
 
 .notes {
   text-align: center;
@@ -153,6 +126,7 @@ textarea:hover {
 
 #hiderow .no_tag {
   position: relative;
+  padding-top: 4px;
 
   .addrow:before {
     content: "+";
@@ -162,8 +136,8 @@ textarea:hover {
     position: absolute;
     padding: 2px;
     border: 1px solid $alert_color;
-    top: -2px;
-    right: 0;
+    top: 8px;
+    right: 16px;
     font-size: 20px;
     font-weight: 300;
     border-radius: 50%;
@@ -180,7 +154,7 @@ textarea:hover {
   //a
   display: block;
   min-width: 100%;
-  //background: $alert_color--light;
+  height: 40px;
 }
 
 .hiderow {

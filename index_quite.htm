@@ -115,7 +115,7 @@ yourclientaddress@email.com
 
 						<div class="col meta_head editable_indicator">Invoice #</div>
 						<div class="col">
-							<textarea rows="1" class="alignright full_width">000123</textarea>
+							<textarea rows="1" class="alignright">000123</textarea>
 						</div>
 
 					</div>
@@ -123,8 +123,8 @@ yourclientaddress@email.com
 					<div class="row">
 
 						<div class="col meta_head editable_indicator">Date</div>
-						<div class="col ">
-							<textarea rows="1" id="date" class="alignright full_width">September 19, 2017</textarea>
+						<div class="col">
+							<textarea rows="1" id="date" class="alignright">September 19, 2017</textarea>
 						</div>
 
 					</div>
@@ -133,7 +133,7 @@ yourclientaddress@email.com
 
 						<div class="col meta_head">Amount Due</div>
 						<div class="col">
-							<div class="due alignright full_width">€ 555.00</div>
+							<div class="due alignright">€ 555.00</div>
 						</div>
 
 					</div>
@@ -144,7 +144,7 @@ yourclientaddress@email.com
 
 			<div id="items" class="table five_col responsive_table">
 
-				<div class="row header_row ">
+				<div class="row header_row">
 					<div class="col editable_indicator item">Item</div>
 					<div class="col editable_indicator description">Description</div>
 					<div class="col editable_indicator unitcost">Unit Cost</div>
@@ -152,15 +152,17 @@ yourclientaddress@email.com
 					<div class="col totalprice">Price</div>
 				</div>
 
-				<div class="row item-row">
+				<div class="row item-row group">
 
+					<div class="delete_wrap guide_delete">
+						<a class="delete" href="javascript:;" title="Remove row">X</a>
+					</div>
 
-
-					<div class="col item" id="what1">
+					<div class="col item group" id="what1">
 						<textarea rows="4">Web Updates</textarea>
 					</div>
 
-					<div class="col description" id="what1details">
+					<div class="col description group" id="what1details">
 						<textarea rows="4">Monthly web updates for paradiseholiday.com (Nov. 1 - Nov. 30, 2017)</textarea>
 					</div>
 
@@ -174,22 +176,21 @@ yourclientaddress@email.com
 
 					<div class="col totalprice">
 						<span class="price">€ 330.00</span>
-						<div class="delete_wrap guide_delete">
-							<a class="delete" href="javascript:;" title="Remove row">X</a>
-						</div>
 					</div>
 
 				</div>
 
-				<div class="row item-row">
+				<div class="row item-row group">
 
+					<div class="delete_wrap">
+						<a class="delete" href="javascript:;" title="Remove row">X</a>
+					</div>
 
-
-					<div class="col item">
+					<div class="col item group">
 						<textarea rows="4">SSL Renewals</textarea>
 					</div>
 
-					<div class="col description">
+					<div class="col description group">
 						<textarea rows="4">Yearly renewals of SSL certificates on main domain and several subdomains</textarea>
 					</div>
 
@@ -203,22 +204,16 @@ yourclientaddress@email.com
 
 					<div class="col totalprice">
 						<span class="price">€ 225.00</span>
-						<div class="delete_wrap">
-							<a class="delete" href="javascript:;" title="Remove row">X</a>
-						</div>
 					</div>
 
 				</div>
 
+				<div id="hiderow" class="row hiderow no_tag">
 
+					<div class="col colspan-5 no_tag">
+						<a id="addrow" class="addrow" href="javascript:;" title="Add a row">Add a row</a>
+					</div>
 
-			</div>
-
-
-			<div id="hiderow" class=" hiderow no_tag">
-
-				<div class=" no_tag ">
-					<a id="addrow" class="addrow" href="javascript:;" title="Add a row">Add a row</a>
 				</div>
 
 			</div>
@@ -236,7 +231,7 @@ yourclientaddress@email.com
 					<div class="col total-line">Subtotal</div>
 
 					<div class="col total-value">
-						<div id="subtotal" class="alignright">€ 555.00</div>
+						<div id="subtotal">€ 555.00</div>
 					</div>
 
 				</div>
@@ -252,7 +247,7 @@ yourclientaddress@email.com
 					<div class="col total-line">Total</div>
 
 					<div class="col total-value">
-						<div id="total" class="alignright">€ 555.00</div>
+						<div id="total">€ 555.00</div>
 					</div>
 
 				</div>
@@ -267,7 +262,7 @@ yourclientaddress@email.com
 
 					<div class="col total-line">Amount Paid</div>
 
-					<div class="col total-value alignright">
+					<div class="col total-value">
 						<textarea rows="1" id="paid" class="paid">€ 0.00</textarea>
 					</div>
 
@@ -284,7 +279,7 @@ yourclientaddress@email.com
 					<div class="col total-line balance">Balance Due</div>
 
 					<div class="col total-value balance">
-						<div class="due alignright">€ 555.00</div>
+						<div class="due">€ 555.00</div>
 					</div>
 
 				</div>
@@ -507,7 +502,7 @@ yourclientaddress@email.com
 
 				$("#addrow").click(function() {
 					$(".item-row:last").after(
-						'<div class="row item-row"><div class="col item"><textarea rows="4">Item Name</textarea></div><div class="col description"><textarea rows="4" >Description</textarea></div><div class="col unitcost"><textarea rows="1" class="cost" >€ 0</textarea rows="1"></div><div class="col quantity"><textarea rows="1" class="qty" >0</textarea></div><div class="col totalprice"><span class="price">€ 0</span><div class="delete_wrap"><a class="delete" href="javascript:;" title="Remove row">X</a></div></div></div>'
+						'<div class="row item-row group"><div class="delete_wrap"><a class="delete" href="javascript:;" title="Remove row">X</a></div><div class="col item group"><textarea rows="4">Item Name</textarea></div><div class="col description group"><textarea rows="4" >Description</textarea></div><div class="col unitcost"><textarea rows="1" class="cost" >€ 0</textarea rows="1"></div><div class="col quantity"><textarea rows="1" class="qty" >0</textarea></div><div class="col totalprice"><span class="price">€ 0</span></div></div>'
 					);
 					if ($(".delete").length > 0) $(".delete").show();
 					bind();
