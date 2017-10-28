@@ -1,6 +1,8 @@
 ## Bill is an on-the-fly invoice generator web app
 
-### try it here [bill.junglestar.org](https://bill.junglestar.org)
+![Bill is an online Invoice Generator](bill_logo.png)
+
+#### Try it here [bill.junglestar.org](https://bill.junglestar.org)
 
 Just enter your invoice data and download the invoice PDF.
 
@@ -17,7 +19,7 @@ Just enter your invoice data and download the invoice PDF.
 
 - download PDF functionality using [html2pdf](https://github.com/eKoopmans/html2pdf)
 
-- guided tour made with [intro.js](https://github.com/usablica/intro.js) [docs here](http://introjs.com/docs/)
+- guided tour made using a customised [intro.js](https://github.com/usablica/intro.js) [docs here](http://introjs.com/docs/)
 
 
 ### 2 do:
