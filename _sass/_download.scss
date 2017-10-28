@@ -1,5 +1,4 @@
 //overriding styles used by JS when downloadPdf is launched
-
 /*download invoice styles*/
 body {
   pading: 0 2rem;
@@ -10,7 +9,10 @@ textarea {
   font-family: Helvetica, sans-serif;
   font-size: $base_font-size--tiny;
 }
-* {
+
+.editable_indicator,
+.amount_paid .total-line,
+div#download_invoice_block > * {
   color: black!important;
 }
 
@@ -22,11 +24,20 @@ textarea {
 .meta {
   width: 300px;
 }
+
 .sums .row {
   padding-top: 1px;
   padding-bottom: 1px;
 }
 
-// .totalprice {
-//   text-align: right;
-// }
+.blue_bg {
+  background-color: $alert_color;
+
+  &:hover {
+    background-color: $black;
+  }
+
+  .bottom_nav a {
+    color: white!important;
+  }
+}

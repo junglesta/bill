@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   color: $alert_color;
   padding: 1px;
+  font-weight: 500;
 }
 
 textarea {
@@ -206,4 +207,9 @@ textarea:hover {
 
 .price {
   white-space: nowrap;
+}
+
+.blue_bg {
+  background-color: $alert_color;
+  .bottom_nav a {color: white;}
 }
