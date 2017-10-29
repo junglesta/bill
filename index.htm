@@ -20,7 +20,7 @@
 		<title>Editable Invoice</title>
 
 		<link id="pagestyle" rel='stylesheet' type='text/css' href='/assets/css/main.css' media="all" />
-		<link rel='stylesheet' type='text/css' href='/css/print.css' media="print" />
+		<link rel='stylesheet' type='text/css' href='/assets/css/print.css' media="print" />
 
 
 		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -64,7 +64,7 @@
 					 <path d="M0 0h24v24h-24z" fill="none"/>
 			 </svg>
 			</a>
-			
+
 		</div>
 
 		<div id="download_invoice_block" class="group">
@@ -377,6 +377,11 @@ yourclientaddress@email.com
 						{
 							element: ".bottom_nav",
 							intro: "Click to <strong>download your Invoice<strong>!",
+							position: "top"
+						},
+						{
+							element: ".invoice_logo",
+							intro: "Get it on your phone and share this webapp! <br><div class='qr_wrap group'><div class='qr'></div><div class='url'>https://bill.junglestar.org</div></div>",
 							position: "top"
 						}
 					]
