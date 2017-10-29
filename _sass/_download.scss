@@ -10,8 +10,8 @@ textarea {
   font-size: $base_font-size--tiny;
 }
 
-.editable_indicator,
 .amount_paid .total-line,
+.editable_indicator,
 div#download_invoice_block > * {
   color: black!important;
 }
@@ -40,4 +40,104 @@ div#download_invoice_block > * {
   .bottom_nav a {
     color: white!important;
   }
+}
+
+.bottom_nav {
+  height: 80px;
+
+  a {
+    line-height: 20px;
+    padding: 10px;
+  }
+}
+
+.addrow:before {
+  top: 8px;
+  right: 0;
+}
+
+
+.table {
+  text-align: left;
+  display: table;
+  width: 100%;
+
+  .header_row .col {
+    font-weight: $font_weight--bold;
+  }
+
+  .row {
+    position: relative;
+    display: table-row;
+  }
+
+  .col {
+    display: table-cell;
+    border-bottom: 1px solid $grey;
+    border-right: 0 none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: auto;
+    margin-right: $spacing;
+  }
+
+  .item,
+  .item textarea {
+    width: 120px;
+    max-width: 120px;
+  }
+
+  .description,
+  .description textarea {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .unitcost,
+  .unitcost textarea {
+    width: 120px;
+    max-width: 120px;
+  }
+
+  .quantity,
+  .quantity textarea {
+    width: 50px;
+    max-width: 50px;
+  }
+
+  .totalprice {
+    position: relative;
+    width: 130px;
+    max-width: 130px;
+    text-align: right;
+  }
+}
+
+.meta {
+  padding-top: $spacing/5;
+  max-width: 350px;
+  float: right;
+}
+
+.meta .row,
+.sums .row {
+  justify-content: space-between;
+}
+
+.meta_head {
+  font-weight: $font_weight--bold;
+}
+
+
+.responsive_table {
+  margin-top: $spacing*2;
+  display: table;
+
+  .col:before {
+    display: none;
+  }
+}
+
+.total-line {
+  text-align: left;
 }
