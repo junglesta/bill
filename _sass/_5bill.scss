@@ -25,7 +25,10 @@ body {
 
 #download_invoice_block {
   max-width: $mediaBp1Width;
-  margin: 0 auto;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
   padding: 0 $spacing;
 }
 
@@ -76,11 +79,10 @@ textarea {
   overflow: hidden;
 }
 
-
 .notes {
   text-align: center;
   border-top: 1px solid $black;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 
   h5 {
     text-transform: uppercase;
@@ -92,82 +94,6 @@ textarea {
   textarea {
     width: 100%;
     text-align: center;
-  }
-}
-
-.col.total-value textarea:focus,
-.col.total-value textarea:hover,
-.delete:hover,
-textarea:focus,
-textarea:hover {
-  background-color: $alert_color--light;
-  cursor: pointer;
-}
-
-.delete_wrap {
-  position: absolute;
-  bottom: 6px;
-  right: 0;
-}
-
-.delete_wrap .delete {
-  display: block;
-  color: $alert_color;
-  text-decoration: none;
-  padding: 2px;
-  border: 1px solid $alert_color;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  max-width: 30px;
-  max-height: 30px;
-  line-height: 24px;
-  text-align: center;
-}
-
-#hiderow .no_tag {
-  position: relative;
-  padding-top: 4px;
-
-  .addrow:before {
-    content: "+";
-    display: inline-block;
-    color: $alert_color;
-    text-decoration: none;
-    position: absolute;
-    padding: 2px;
-    border: 1px solid $alert_color;
-    top: 8px;
-    right: 0;
-    font-size: 20px;
-    font-weight: 300;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    max-width: 30px;
-    max-height: 30px;
-    line-height: 22px;
-    text-align: center;
-  }
-}
-
-.addrow {
-  //a
-  display: block;
-  min-width: 100%;
-  height: 40px;
-}
-
-.hiderow {
-
-  &:hover {
-    cursor: pointer;
-
-    .addrow {
-      visibility: visible;
-      color: black;
-      background: $alert_color--light;
-    }
   }
 }
 
@@ -196,31 +122,25 @@ textarea:hover {
   }
 }
 
-.sums {
-  margin-top: 1rem;
-  @include media( "screen", ">minWidth") {
-    .blank {
-      display: none;
-    }
-  }
-}
-
 .price {
   white-space: nowrap;
 }
 
 .blue_bg {
   background-color: $alert_color;
-  .bottom_nav a {color: white;}
+
+  .bottom_nav a {
+    color: white;
+  }
 }
 
 .qr_wrap {
   margin-top: 1rem;
   margin-bottom: 5px;
   height: 240px;
-  padding: 10px;
-  padding-bottom: 30px;
+  padding: 10px 10px 30px;
   background-color: white;
+
   .url {
     display: block;
     color: black;
@@ -228,10 +148,11 @@ textarea:hover {
     margin-top: 5px;
   }
 }
+
 .qr {
+  //QR to https://bill.junglestar.org
   height: 240px;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 36 261 261"><path d="M45 108h-9v9h9v-9zm0 18h-9v9h9v-9zm0 54h-9v9h9v-9zM99 36H36v63h63V36zm-9 54H45V45h45v45zm-45 63h9v-9h-9v9zm36-99H54v27h27V54zm0 72v-9H63v27h9v-18h9zM54 279h27v-27H54v27zm-18 18h63v-63H36v63zm9-54h45v45H45v-45zm45-135v9h9v-9h-9zm0 18v9h9v-9h-9zm9 18h-9v9h9v-9zm-9 81h9v-9h-9v9zm18-108h-9v9h9v-9zm0 45h9v-18h18v-18h-9v-9h9v-9h-18V90h-9v27h9v18H99v9h9v18zm0 45v-27H90v-9h9v-9h-9v-9h-9v-9h-9v18h9v9h-9v-9h-9v9h-9v9h27v9h18v9H81v9h-9v9h-9v-9h9v-9h9v-9H54v18h-9v18h36v-9h9v-9h9v9h18v-9h-9zm18 54h-9v9h9v-9zm0 18h-9v9h-9v9h27v-9h-9v-9zm0-180h9v-9h-9v9zm9-36h9V45h27v9h9V36h-54v9h9v18zm9 63v-9h-9v9h9zm-9 162h27v-9h-9v-18h-18v27zm18-180h-9v9h9v-9zm9-18v9h9V81h9V63h-9v-9h-9v18h-27v-9h-18v-9h9v-9h-18v27h18v9h9v9h9v9h9v-9h9zm0 9h-9v9h9v-9zm9 27v-9h9v-9h-18v18h9zm0 171v-9h-9v9h9zm9-18h-9v9h9v-9zm9-216v-9h-9v9h9zm0 234v-9h-9v9h9zm0-162h9v-9h18v-9h-18v-9h-9v27zm0 45v9h9v-9h-9zm9-117h-9v18h-9v18h9v-9h9v-9h27V63h-9v9h-9V45h-9v-9h-9v18h9v9zm9 45V90h-9v18h9zm-9 189h18v-9h-18v9zm27-252h-9v9h9v-9zm0 90v-9h-9v9h9zm18-27h-18V90h-9v27h27v-9zm0 126h-9v9h9v-9zm9-54v-9h-9v9h9zm9-63h-9v18h9v-18zm0 72h-63v9h9v9h9v9h-18v9h-9v-36h-9v18h-9v-9h-27v-36h9v18h9v9h18v-9h-9v-9h9v9h9v-9h9v9h9v-18h-36v-18h18v-9h-27v9h-9v9h-18v9h-18v9h18v9h-9v9h9v9h-9v-9h-9v18h18v18h9v-9h9v-9h9v9h18v18h-18v-9h-18v9h-18v-18h-9v9h-9v9h9v9h9v9h27v9h9v-18h27v9h-18v9h9v9h9v-9h9v-9h9v9h-9v18h18v-9h9v27h18v-9h-9v-9h27v9h9v9h9v-18h9v-27h9v-9h-18v18h-9v-9h-9v-9h18v-9h-9v-9h-9v-9h-27v-9h-9v-9h9v9h9v-9h9v9h18v-9h-9v-9zm-45 45h-9v9h-9v-9h9v-9h9v9zm45 36h-27v-9h27v9zm-9-45v27h-27v-27h27zm0 72h9v-9h-9v9zm27-243h-27v27h27V54zm-9 90v-9h-9v9h9zm-9 9h-9v-18h-9v-9h-9v36h-9v-9h-9v-18h-9v27h9v9h27v-9h9v9h18v9h-9v9h9v9h18v9h9v-18h-18v-27h-18v-9zm9-27h18v-18h-27v9h9v9zm27 90h-27v9h27v-9zM234 36v63h63V36h-63zm54 54h-45V45h45v45zm0 63h-9v9h18v-18h-9v9zm0 27h9v-9h-9v9zm9 108v-9h-9v9h9z"/></svg>');
   background-repeat: no-repeat;
   background-position: center center;
-
 }

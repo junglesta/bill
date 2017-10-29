@@ -1,4 +1,106 @@
 
+.col.total-value textarea:focus,
+.col.total-value textarea:hover,
+.delete:hover,
+textarea:focus,
+textarea:hover {
+  background-color: $alert_color--light;
+  cursor: pointer;
+}
+
+.delete_wrap {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+
+  .delete {
+    display: block;
+    color: $alert_color;
+    background-color: white;
+    text-decoration: none;
+    padding: 2px;
+    border: 1px solid $alert_color;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.addrow:before {
+  content: "+";
+  display: inline-block;
+  color: $alert_color;
+  background-color: white;
+  text-decoration: none;
+  position: absolute;
+  padding: 2px;
+  border: 1px solid $alert_color;
+  top: 8px;
+  right: 0;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 400;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  text-align: center;
+
+  @include media( "screen", "<bp1Width") {
+    top: 11px;
+    right: -15px;
+  }
+}
+
+.addrow {
+  //a
+  display: block;
+  min-width: 100%;
+  height: 40px;
+  visibility: visible;
+}
+
+.hiderow {
+
+  &:hover {
+    cursor: pointer;
+
+    .addrow {
+      //a
+      color: black;
+      background: $alert_color--light;
+    }
+  }
+
+  .no_tag {
+    position: relative;
+    padding-top: 4px;
+  }
+
+  @include media( "screen", "<bp1Width") {
+    border-bottom: 1px solid $grey;
+    height: 28px;
+    margin-bottom: 3rem;
+  }
+
+}
+
+
+.sums {
+  margin-top: 1rem;
+  @include media( "screen", ">minWidth") {
+    .blank {
+      display: none;
+    }
+  }
+}
+
+
 .total-line {
   border-right: 0;
   text-align: right;
@@ -86,7 +188,7 @@
 
 .meta {
   padding-top: $spacing/5;
-  width: 350px;
+  max-width: 350px;
   float: right;
 }
 
@@ -105,12 +207,53 @@
 
 .responsive_table {
   margin-top: $spacing*2;
-  @include media( "screen", "<minWidth") {
+
+
+  @include media( "screen", "<bp1Width") {
+    display: block;
+    margin-top: $spacing*5;
+
+    .col,
+    .row {
+      display: block;
+      width: 100%;
+      min-width: 100%;
+      border-bottom: 0 none;
+    }
+    .header_row {
+      display: none;
+    }
+
+    .col {
+      border-right: 1px solid $alert_color;
+      padding-right: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin-top: 5px;
+    }
+
+    .totalprice {
+      text-align: left;
+      margin-bottom: 2rem;
+      border-right: 0 none;
+    }
+
+    .delete_wrap {
+      bottom: 15px;
+      right: -15px;
+      .delete {}
+    }
+
     .col:before {
       font-weight: $font_weight--bold;
       margin-right: 0.5rem;
       display: inline-block;
-      width: 30%;
+      border-bottom: 1px solid $grey;
+      width: 100%;
     }
 
     .col:nth-of-type(1):before {
@@ -144,6 +287,7 @@
       color: black;
     }
   }
+
 }
 
 .col_span_all {

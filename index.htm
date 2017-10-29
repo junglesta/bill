@@ -55,6 +55,9 @@
 				    <path d="M0 0h24v24h-24z" fill="none"/>
 				    <path fill="white" d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92c-.72.73-1.17 1.33-1.17 2.83h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
 				</svg>
+				<div class="small_screen_text">
+					Help
+				</div>
 
 			</a>
 
@@ -188,7 +191,7 @@ yourclientaddress@email.com
 					<div class="col totalprice">
 						<span class="price">€ 330.00</span>
 						<div class="delete_wrap guide_delete">
-							<a class="delete" href="javascript:;" title="Remove row">X</a>
+							<a class="delete" href="javascript:;" title="Remove item">X</a>
 						</div>
 					</div>
 
@@ -217,7 +220,7 @@ yourclientaddress@email.com
 					<div class="col totalprice">
 						<span class="price">€ 225.00</span>
 						<div class="delete_wrap">
-							<a class="delete" href="javascript:;" title="Remove row">X</a>
+							<a class="delete" href="javascript:;" title="Remove item">X</a>
 						</div>
 					</div>
 
@@ -227,9 +230,9 @@ yourclientaddress@email.com
 
 			</div>
 
-			<div id="hiderow" class=" hiderow no_tag">
+			<div id="hiderow" class="hiderow">
 
-				<div class=" no_tag ">
+				<div class="no_tag">
 					<a id="addrow" class="addrow" href="javascript:;" title="Add a row">Add a row</a>
 				</div>
 
@@ -380,7 +383,7 @@ yourclientaddress@email.com
 							position: "top"
 						},
 						{
-							element: ".invoice_logo",
+							element: "#download_invoice_block",
 							intro: "Get it on your phone and share this webapp! <br><div class='qr_wrap group'><div class='qr'></div><div class='url'>https://bill.junglestar.org</div></div>",
 							position: "top"
 						}
@@ -525,7 +528,7 @@ yourclientaddress@email.com
 
 				$("#addrow").click(function() {
 					$(".item-row:last").after(
-						'<div class="row item-row"><div class="col item"><textarea rows="3">Item Name</textarea></div><div class="col description"><textarea rows="3" >Description</textarea></div><div class="col unitcost"><textarea rows="1" class="cost" >€ 0</textarea rows="1"></div><div class="col quantity"><textarea rows="1" class="qty" >0</textarea></div><div class="col totalprice"><span class="price">€ 0</span><div class="delete_wrap"><a class="delete" href="javascript:;" title="Remove row">X</a></div></div></div>'
+						'<div class="row item-row"><div class="col item"><textarea rows="3">Item Name</textarea></div><div class="col description"><textarea rows="3" >Description</textarea></div><div class="col unitcost"><textarea rows="1" class="cost" >€ 0</textarea rows="1"></div><div class="col quantity"><textarea rows="1" class="qty" >0</textarea></div><div class="col totalprice"><span class="price">€ 0</span><div class="delete_wrap"><a class="delete" href="javascript:;" title="Remove item">X</a></div></div></div>'
 					);
 					if ($(".delete").length > 0) $(".delete").show();
 					bind();
