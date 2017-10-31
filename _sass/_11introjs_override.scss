@@ -1,0 +1,194 @@
+//overriding the default styles
+
+.introjs-helperLayer {
+  background-color: #fff;
+  border: 0 none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 none;
+          box-shadow: 0 0 0 none;
+  outline: #0069cc 2px solid;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+
+.introjs-tooltipReferenceLayer {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+
+.introjs-helperNumberLayer {
+  background: $alert_color;
+  border: 3px solid white;
+  text-shadow: none;
+}
+
+.introjs-arrow {
+  border: 5px solid $alert_color;
+}
+
+.introjs-arrow.top {
+  border-bottom-color: $alert_color;
+}
+
+.introjs-arrow.top-right {
+  border-bottom-color: $alert_color;
+}
+
+.introjs-arrow.top-middle {
+  border-bottom-color: $alert_color;
+}
+
+.introjs-arrow.right {
+  border-left-color: $alert_color;
+}
+
+.introjs-arrow.right-bottom {
+  border-left-color: $alert_color;
+}
+
+.introjs-arrow.bottom {
+  border-top-color: $alert_color;
+}
+
+.introjs-arrow.left {
+  border-right-color: $alert_color;
+}
+
+.introjs-arrow.left-bottom {
+  border-right-color: $alert_color;
+}
+
+.introjs-tooltip {
+  background-color: $alert_color;
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+
+.introjs-button {
+  color: white;
+  background: $alert_color;
+  border: 1px solid white;
+  text-shadow: none;
+}
+
+.introjs-button:hover {
+  color: lighten($alert_color,30%);
+}
+
+.introjs-button:active,
+.introjs-button:focus {
+  color: white;
+  background: $alert_color;
+  border-color: white;
+}
+
+.introjs-skipbutton {
+  color: white;
+
+  &:hover {
+    color: lighten($alert_color, 30%);
+  }
+}
+
+.introjs-disabled,
+.introjs-disabled:focus,
+.introjs-disabled:hover {
+  color: $alert_color;
+  border-color: $alert_color;
+  background-color: lighten($alert_color, 20%);
+}
+
+.introjs-bullets ul li a {
+  background: #fff;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+  &:hover {
+    background: lighten($alert_color,20%);
+  }
+
+  &.active {
+    background: #000;
+  }
+}
+
+.introjs-hint:hover > .introjs-hint-pulse {
+  border: 0 none;
+}
+
+.introjs-hint-pulse {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+
+.introjs-tooltiptext {
+  color: white;
+  font-weight: 500;
+}
+
+
+//styles for small screen where tooltip overlap element, gosh...
+
+@include media( "screen", "<minWidth") {
+  .step1 + .introjs-tooltipReferenceLayer {
+        margin-top: 9rem;
+  }
+
+  .step2 + .introjs-tooltipReferenceLayer {
+        margin-top: 9rem;
+  }
+
+  .step3 + .introjs-tooltipReferenceLayer {
+        margin-top: 8rem;
+  }
+
+  .step4 + .introjs-tooltipReferenceLayer {
+        margin-top: 8rem;
+  }
+
+  .step5 + .introjs-tooltipReferenceLayer {
+        margin-top: 7rem;
+  }
+
+  .step6 + .introjs-tooltipReferenceLayer {
+        margin-top: 7rem;
+  }
+
+  .step7 + .introjs-tooltipReferenceLayer {
+        margin-top: 0;
+  }
+
+  .step8 + .introjs-tooltipReferenceLayer {
+        margin-top: 6rem;
+  }
+
+  .step9 + .introjs-tooltipReferenceLayer {
+        margin-top: 0;
+  }
+
+  .step10 + .introjs-tooltipReferenceLayer {
+        margin-top: -6rem;
+  }
+
+  .step11 + .introjs-tooltipReferenceLayer {
+        margin-top: 5rem;
+  }
+
+  .step12 + .introjs-tooltipReferenceLayer {
+        margin-top: -6rem;
+  }
+
+  .step13 + .introjs-tooltipReferenceLayer {
+        margin-top: -17rem;
+  }
+
+}
