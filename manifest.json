@@ -1,5 +1,7 @@
 {
-	"name": "Billpaid",
+	"name": "Bill",
+	"short_name": "Bill",
+	"start_url": "https:\/\/bill.junglestar.org",
 	"icons": [
 		{
 			"src": "\/android-chrome-192x192.png",
