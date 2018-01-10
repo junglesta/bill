@@ -60,6 +60,7 @@ textarea {
   text-transform: uppercase;
   letter-spacing: $spacing;
   padding: $spacing/2;
+  box-sizing: content-box;
 }
 
 .header_wrap {

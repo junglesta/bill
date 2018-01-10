@@ -39,6 +39,7 @@ google:
 markdown: kramdown
 plugins:
  - jekyll-seo-tag
+ - jekyll-sitemap
  - html-proofer
 exclude:
   - Gemfile.lock
