@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd3a940b-265d-43d9-949c-e3b5add52044/deploy-status)](https://app.netlify.com/sites/docu/deploys)
+
 ## Bill is an on-the-fly invoice generator web app
 
 ![Bill is an online Invoice Generator](bill_logo.png)
@@ -5,7 +7,6 @@
 #### Try it here [bill.junglestar.org](https://bill.junglestar.org)
 
 Just enter your invoice data and download the invoice PDF.
-
 
 ### Features
 
@@ -23,9 +24,8 @@ Just enter your invoice data and download the invoice PDF.
 
 - guided tour, (feat. keyboard navigation) made using a customised [intro.js](https://github.com/usablica/intro.js) [docs here](http://introjs.com/docs/)
 
-
 ### 2 do:
 
-- improve guided tour using [shepherd](https://github.com/HubSpot/shepherd) or [Trip](https://github.com/EragonJ/Trip.js) or [hopscotch](https://github.com/linkedin/hopscotch) or [anno](https://github.com/iamdanfox/anno.js) or  [guider.js](https://github.com/pickhardt/Guiders-JS)
+- improve guided tour using [shepherd](https://github.com/HubSpot/shepherd) or [Trip](https://github.com/EragonJ/Trip.js) or [hopscotch](https://github.com/linkedin/hopscotch) or [anno](https://github.com/iamdanfox/anno.js) or [guider.js](https://github.com/pickhardt/Guiders-JS)
 
 - add keyboard shortcut (print, reset) maybe using [kibo](https://github.com/marquete/kibo)

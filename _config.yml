@@ -4,15 +4,14 @@ description: > # this means to ignore newlines until "baseurl:"
   Quick and simple. Make an invoice and download it!
 keywords: invoice, webapp, single-page, responsive, guided tour, secure, downloadable pdf,
 lang: en_US
-version: 2.0.0
+version: 2.0.1
 
-baseurl: ""
-url: "https:/bill.junglestar.org"
+baseurl: ''
+url: 'https:/bill.junglestar.org'
 
 company:
   name: Junglestar
   email: info@junglestar.org
-
 
 # SEO https://jekyll.github.io/jekyll-seo-tag/usage/
 # SEO tag will use the YAML front matter if included in a post, page, or document:
@@ -32,15 +31,15 @@ facebook:
 logo: /assets/favicons/apple-touch-icon-152x152.png
 
 google:
-  analytics: UA-108493876-1
+  analytics: G-8FLJCNQCK9
   verification:
 
 # Build settings
 markdown: kramdown
 plugins:
- - jekyll-seo-tag
- - jekyll-sitemap
- - html-proofer
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - html-proofer
 exclude:
   - Gemfile.lock
   - node_modules
