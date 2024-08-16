@@ -1,4 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cd3a940b-265d-43d9-949c-e3b5add52044/deploy-status)](https://app.netlify.com/sites/docu/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e72750bc-d967-40f5-ae62-919fb46cf636/deploy-status)](https://app.netlify.com/sites/docu/deploys)
+
+# BILL 2.0.1
 
 ## Bill is an on-the-fly invoice generator web app
 
@@ -16,9 +18,9 @@ Just enter your invoice data and download the invoice PDF.
 
 - Delete logo
 
-- Currency independent (type in your preferred currency)
+- Currency independent (type in your preferred currency in the notes!)
 
-- No storage, everything happens just in the browser, reload and all inputs are gone!
+- No storage, everything you type stays just in your browser, NO DATA IS EVER SENT. To test: reload and all your inputs are gone!
 
 - download PDF functionality using [html2pdf](https://github.com/eKoopmans/html2pdf)
 
