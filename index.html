@@ -1,0 +1,3050 @@
+<!DOCTYPE html>
+<html lang="en" moznomarginboxes mozdisallowselectionprint prefix="og: http://ogp.me/ns#">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108493876-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-108493876-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Editable Invoice</title>
+
+    <!-- <link id="pagestyle" rel="stylesheet" type="text/css" href="/assets/css/main.css" media="all" /> -->
+
+    <style>
+      html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      main,
+      menu,
+      nav,
+      section,
+      summary {
+        display: block;
+      }
+
+      audio,
+      canvas,
+      progress,
+      video {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+
+      [hidden],
+      template {
+        display: none;
+      }
+
+      a {
+        background-color: transparent;
+      }
+
+      a:active,
+      a:hover {
+        outline: 0;
+      }
+
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+      }
+
+      b,
+      strong {
+        font-weight: inherit;
+      }
+
+      b,
+      strong {
+        font-weight: bolder;
+      }
+
+      dfn {
+        font-style: italic;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+
+      mark {
+        background-color: #ff0;
+        color: #000;
+      }
+
+      small {
+        font-size: 80%;
+      }
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      img {
+        border: 0;
+      }
+
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      figure {
+        margin: 1em 40px;
+      }
+
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+
+      pre {
+        overflow: auto;
+      }
+
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font: inherit;
+        margin: 0;
+      }
+
+      button {
+        overflow: visible;
+      }
+
+      button,
+      select {
+        text-transform: none;
+      }
+
+      button,
+      html input[type='button'],
+      input[type='reset'],
+      input[type='submit'] {
+        -webkit-appearance: button;
+        cursor: pointer;
+      }
+
+      button[disabled],
+      html input[disabled] {
+        cursor: default;
+      }
+
+      button::-moz-focus-inner,
+      input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+
+      button:-moz-focusring,
+      input:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+
+      input {
+        line-height: normal;
+      }
+
+      input[type='checkbox'],
+      input[type='radio'] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        height: auto;
+      }
+
+      input[type='search'] {
+        -webkit-appearance: textfield;
+      }
+
+      input[type='search']::-webkit-search-cancel-button,
+      input[type='search']::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      fieldset {
+        border: 1px solid #c0c0c0;
+        margin: 0 2px;
+        padding: 0.35em 0.625em 0.75em;
+      }
+
+      legend {
+        border: 0;
+        padding: 0;
+      }
+
+      textarea {
+        overflow: auto;
+      }
+
+      optgroup {
+        font-weight: bold;
+      }
+
+      .no_select {
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -khtml-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+      }
+
+      .kill_mouse_touch {
+        pointer-events: none !important;
+      }
+
+      /**
+* Conditional Media Query Mixin by @sheiko (http://dsheiko.com)
+* The problem this mixin solves is explained there
+* http://css-tricks.com/conditional-media-query-mixins/
+* https://github.com/dsheiko
+* MIT license: http://www.opensource.org/licenses/mit-license.php
+*/
+      html {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-x: hidden !important;
+        font-size: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        line-height: 1.4446;
+        font-weight: 400;
+      }
+      @media only screen and (min-width: 601px) {
+        html {
+          font-size: 16px;
+        }
+      }
+      @media only screen and (min-width: 841px) {
+        html {
+          font-size: 17px;
+        }
+      }
+      @media only screen and (min-width: 1261px) {
+        html {
+          font-size: 18px;
+        }
+      }
+      @media only screen and (min-width: 601px) {
+        html {
+          font-weight: 300;
+        }
+      }
+
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+      }
+
+      a,
+      button,
+      input,
+      label,
+      select,
+      textarea {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      a:focus,
+      button:focus,
+      input:focus,
+      label:focus,
+      select:focus,
+      textarea:focus {
+        outline: -webkit-focus-ring-color auto 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+
+      .hide {
+        display: none !important;
+      }
+
+      .group:after,
+      .group:before {
+        content: '';
+        display: table;
+      }
+
+      .group:after {
+        clear: both;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .alignright {
+        text-align: right;
+      }
+
+      .full_width {
+        width: 100%;
+      }
+
+      /* hacked on: CSS-Tricks Example by Chris Coyier http://css-tricks.com */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0 1rem;
+        line-height: 1.4446;
+        font-weight: 300;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+      }
+      @media only screen and (min-width: 601px) {
+        body {
+          font-size: 16px;
+        }
+      }
+      @media only screen and (min-width: 841px) {
+        body {
+          font-size: 17px;
+          margin: 0 2rem;
+        }
+      }
+      @media only screen and (min-width: 1261px) {
+        body {
+          font-size: 18px;
+        }
+      }
+
+      #download_invoice_block {
+        max-width: 840px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0597ff;
+        padding: 1px;
+        font-weight: 500;
+      }
+
+      textarea {
+        border: 0;
+        overflow: hidden;
+        resize: none;
+        font-size: inherit;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 1.4446;
+        display: block;
+        width: auto;
+      }
+
+      .header {
+        font-weight: 500;
+        height: 2rem;
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        padding: 0.5rem;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+
+      .header_wrap {
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+      }
+
+      .customer_data,
+      .own_data {
+        float: left;
+        height: 150px;
+        min-width: 300px;
+        padding-bottom: 1rem;
+      }
+
+      #customer {
+        overflow: hidden;
+      }
+
+      .notes {
+        text-align: center;
+        border-top: 1px solid black;
+        padding-bottom: 7rem;
+      }
+      .notes h5 {
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        padding: 8px 0;
+        margin: 0 0 8px;
+      }
+      .notes textarea {
+        width: 100%;
+        text-align: center;
+      }
+
+      .invoice_logo {
+        width: 100px;
+      }
+
+      .bottom_nav {
+        position: fixed;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        height: 50px;
+        background-color: black;
+      }
+      .bottom_nav a {
+        display: block;
+        color: white;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+      }
+      .bottom_nav:hover {
+        background-color: #0597ff;
+      }
+
+      .price {
+        white-space: nowrap;
+      }
+
+      .blue_bg {
+        background-color: #0597ff;
+      }
+      .blue_bg .bottom_nav a {
+        color: white;
+      }
+
+      .qr_wrap {
+        margin-top: 1rem;
+        margin-bottom: 5px;
+        height: 240px;
+        padding: 10px 10px 30px;
+        background-color: white;
+      }
+      .qr_wrap .url {
+        display: block;
+        color: black;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      .qr {
+        height: 240px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 36 261 261"><path d="M45 108h-9v9h9v-9zm0 18h-9v9h9v-9zm0 54h-9v9h9v-9zM99 36H36v63h63V36zm-9 54H45V45h45v45zm-45 63h9v-9h-9v9zm36-99H54v27h27V54zm0 72v-9H63v27h9v-18h9zM54 279h27v-27H54v27zm-18 18h63v-63H36v63zm9-54h45v45H45v-45zm45-135v9h9v-9h-9zm0 18v9h9v-9h-9zm9 18h-9v9h9v-9zm-9 81h9v-9h-9v9zm18-108h-9v9h9v-9zm0 45h9v-18h18v-18h-9v-9h9v-9h-18V90h-9v27h9v18H99v9h9v18zm0 45v-27H90v-9h9v-9h-9v-9h-9v-9h-9v18h9v9h-9v-9h-9v9h-9v9h27v9h18v9H81v9h-9v9h-9v-9h9v-9h9v-9H54v18h-9v18h36v-9h9v-9h9v9h18v-9h-9zm18 54h-9v9h9v-9zm0 18h-9v9h-9v9h27v-9h-9v-9zm0-180h9v-9h-9v9zm9-36h9V45h27v9h9V36h-54v9h9v18zm9 63v-9h-9v9h9zm-9 162h27v-9h-9v-18h-18v27zm18-180h-9v9h9v-9zm9-18v9h9V81h9V63h-9v-9h-9v18h-27v-9h-18v-9h9v-9h-18v27h18v9h9v9h9v9h9v-9h9zm0 9h-9v9h9v-9zm9 27v-9h9v-9h-18v18h9zm0 171v-9h-9v9h9zm9-18h-9v9h9v-9zm9-216v-9h-9v9h9zm0 234v-9h-9v9h9zm0-162h9v-9h18v-9h-18v-9h-9v27zm0 45v9h9v-9h-9zm9-117h-9v18h-9v18h9v-9h9v-9h27V63h-9v9h-9V45h-9v-9h-9v18h9v9zm9 45V90h-9v18h9zm-9 189h18v-9h-18v9zm27-252h-9v9h9v-9zm0 90v-9h-9v9h9zm18-27h-18V90h-9v27h27v-9zm0 126h-9v9h9v-9zm9-54v-9h-9v9h9zm9-63h-9v18h9v-18zm0 72h-63v9h9v9h9v9h-18v9h-9v-36h-9v18h-9v-9h-27v-36h9v18h9v9h18v-9h-9v-9h9v9h9v-9h9v9h9v-18h-36v-18h18v-9h-27v9h-9v9h-18v9h-18v9h18v9h-9v9h9v9h-9v-9h-9v18h18v18h9v-9h9v-9h9v9h18v18h-18v-9h-18v9h-18v-18h-9v9h-9v9h9v9h9v9h27v9h9v-18h27v9h-18v9h9v9h9v-9h9v-9h9v9h-9v18h18v-9h9v27h18v-9h-9v-9h27v9h9v9h9v-18h9v-27h9v-9h-18v18h-9v-9h-9v-9h18v-9h-9v-9h-9v-9h-27v-9h-9v-9h9v9h9v-9h9v9h18v-9h-9v-9zm-45 45h-9v9h-9v-9h9v-9h9v9zm45 36h-27v-9h27v9zm-9-45v27h-27v-27h27zm0 72h9v-9h-9v9zm27-243h-27v27h27V54zm-9 90v-9h-9v9h9zm-9 9h-9v-18h-9v-9h-9v36h-9v-9h-9v-18h-9v27h9v9h27v-9h9v9h18v9h-9v9h9v9h18v9h9v-18h-18v-27h-18v-9zm9-27h18v-18h-27v9h9v9zm27 90h-27v9h27v-9zM234 36v63h63V36h-63zm54 54h-45V45h45v45zm0 63h-9v9h18v-18h-9v9zm0 27h9v-9h-9v9zm9 108v-9h-9v9h9z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .col.total-value textarea:focus,
+      .col.total-value textarea:hover,
+      .delete:hover,
+      textarea:focus,
+      textarea:hover {
+        background-color: #d1ecff;
+        cursor: pointer;
+      }
+
+      .delete_wrap {
+        position: absolute;
+        bottom: 6px;
+        right: 0;
+      }
+      .delete_wrap .delete {
+        display: block;
+        color: #0597ff;
+        background-color: white;
+        text-decoration: none;
+        padding: 2px;
+        border: 1px solid #0597ff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      .addrow:before {
+        content: '+';
+        display: inline-block;
+        color: #0597ff;
+        background-color: white;
+        text-decoration: none;
+        position: absolute;
+        padding: 2px;
+        border: 1px solid #0597ff;
+        top: 8px;
+        right: 0;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 400;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+        text-align: center;
+      }
+      @media only screen and (max-width: 840px) {
+        .addrow:before {
+          top: 11px;
+          right: -15px;
+        }
+      }
+
+      .addrow {
+        display: block;
+        min-width: 100%;
+        height: 40px;
+        visibility: visible;
+      }
+
+      .hiderow:hover {
+        cursor: pointer;
+      }
+      .hiderow:hover .addrow {
+        color: black;
+        background: #d1ecff;
+      }
+      .hiderow .no_tag {
+        position: relative;
+        padding-top: 4px;
+      }
+      @media only screen and (max-width: 840px) {
+        .hiderow {
+          border-bottom: 1px solid #cccccc;
+          height: 28px;
+          margin-bottom: 3rem;
+        }
+      }
+
+      .sums {
+        margin-top: 1rem;
+      }
+      @media only screen and (min-width: 601px) {
+        .sums .blank {
+          display: none;
+        }
+      }
+
+      .total-line {
+        border-right: 0;
+        text-align: right;
+        font-weight: 500;
+      }
+      @media only screen and (min-width: 601px) {
+        .total-line {
+          text-align: left;
+        }
+      }
+      .amount_paid .total-line {
+        color: #0597ff;
+      }
+
+      .col.total-value {
+        border-left: 0;
+        padding: 10px 0;
+      }
+      .col.total-value textarea {
+        height: 20px;
+        background: none;
+        text-align: right;
+        width: 100%;
+      }
+
+      .col.blank {
+        width: 100%;
+      }
+
+      .table {
+        text-align: left;
+        display: table;
+        width: 100%;
+      }
+      .table .header_row .col {
+        font-weight: 500;
+      }
+      .table .row {
+        position: relative;
+        display: table-row;
+      }
+      .table .col {
+        display: table-cell;
+        border-bottom: 1px solid #cccccc;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        width: auto;
+        margin-right: 1rem;
+      }
+      .table .item,
+      .table .item textarea {
+        width: 120px;
+        max-width: 120px;
+      }
+      .table .description,
+      .table .description textarea {
+        width: 300px;
+        max-width: 300px;
+      }
+      .table .unitcost,
+      .table .unitcost textarea {
+        width: 120px;
+        max-width: 120px;
+      }
+      .table .quantity,
+      .table .quantity textarea {
+        width: 50px;
+        max-width: 50px;
+      }
+      .table .totalprice {
+        position: relative;
+        width: 130px;
+        max-width: 130px;
+        text-align: right;
+      }
+
+      .meta {
+        padding-top: 0.2rem;
+        max-width: 350px;
+        float: right;
+      }
+
+      .meta .row,
+      .sums .row {
+        justify-content: space-between;
+      }
+
+      .editable_indicator {
+        color: #0597ff;
+      }
+
+      .meta_head {
+        font-weight: 500;
+      }
+
+      .responsive_table {
+        margin-top: 2rem;
+      }
+      @media only screen and (max-width: 840px) {
+        .responsive_table {
+          display: block;
+          margin-top: 5rem;
+        }
+        .responsive_table .col,
+        .responsive_table .row {
+          display: block;
+          width: 100%;
+          min-width: 100%;
+          border-bottom: 0 none;
+        }
+        .responsive_table .header_row {
+          display: none;
+        }
+        .responsive_table .col {
+          border-right: 1px solid #0597ff;
+          padding-right: 10px;
+        }
+        .responsive_table textarea {
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          margin-top: 5px;
+        }
+        .responsive_table .totalprice {
+          text-align: left;
+          margin-bottom: 2rem;
+          border-right: 0 none;
+        }
+        .responsive_table .delete_wrap {
+          bottom: 15px;
+          right: -15px;
+        }
+        .responsive_table .col:before {
+          font-weight: 500;
+          margin-right: 0.5rem;
+          display: inline-block;
+          border-bottom: 1px solid #cccccc;
+          width: 100%;
+        }
+        .responsive_table .col:nth-of-type(1):before {
+          content: 'Item';
+          color: #0597ff;
+        }
+        .responsive_table .col.no_tag:before,
+        .responsive_table .hiderow .col:nth-of-type(1):before {
+          content: '';
+          display: none;
+        }
+        .responsive_table .col:nth-of-type(2):before {
+          content: 'Description';
+          color: #0597ff;
+        }
+        .responsive_table .col:nth-of-type(3):before {
+          content: 'Unit cost';
+          color: #0597ff;
+        }
+        .responsive_table .col:nth-of-type(4):before {
+          content: 'Quantity';
+          color: #0597ff;
+        }
+        .responsive_table .col:nth-of-type(5):before {
+          content: 'Price';
+          color: black;
+        }
+      }
+
+      .col_span_all {
+        column-span: all;
+      }
+
+      #logo {
+        text-align: right;
+        float: right;
+        position: relative;
+        max-width: 500px;
+        max-height: 180px;
+        overflow: hidden;
+        display: none;
+      }
+      @media only screen and (min-width: 841px) {
+        #logo {
+          display: block;
+        }
+      }
+
+      #logo.edit,
+      #logo:hover {
+        border: 1px solid #cccccc;
+        margin-top: 0;
+        max-height: 125px;
+        cursor: pointer;
+      }
+
+      #logoctr {
+        display: none;
+      }
+
+      #logo.edit #logoctr,
+      #logo:hover #logoctr {
+        display: block;
+        text-align: right;
+        padding: 0 0.3333333333rem;
+        cursor: pointer;
+      }
+
+      #logohelp {
+        text-align: left;
+        display: none;
+        padding: 0.6666666667rem 0.3333333333rem;
+      }
+      #logohelp input {
+        margin-bottom: 0.3333333333rem;
+      }
+      .edit #logohelp {
+        display: block;
+      }
+
+      .edit #cancel-logo,
+      .edit #save-logo {
+        display: inline;
+      }
+
+      #cancel-logo,
+      #save-logo,
+      .edit #change-logo,
+      .edit #delete-logo,
+      .edit #image {
+        display: none;
+      }
+
+      .help {
+        position: static;
+        top: 0;
+        right: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        height: 50px;
+        background-color: #0597ff;
+      }
+      .help svg {
+        display: none;
+      }
+      .help a {
+        display: block;
+        color: white;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        color: white;
+      }
+      @media only screen and (min-width: 601px) {
+        .help {
+          position: fixed;
+          z-index: 100;
+          top: 1rem;
+          right: 1rem;
+          width: 60px;
+          height: 60px;
+          background-color: #0597ff;
+          border-radius: 50%;
+        }
+        .help a {
+          display: block;
+          color: white;
+          line-height: 60px;
+          text-align: center;
+        }
+        .help svg {
+          display: block;
+        }
+        .help .small_screen_text {
+          display: none;
+        }
+      }
+
+      .introjs-overlay {
+        position: absolute;
+        box-sizing: content-box;
+        z-index: 999999;
+        background-color: #000;
+        opacity: 0;
+        background: -moz-radial-gradient(
+          center,
+          ellipse cover,
+          rgba(0, 0, 0, 0.4) 0,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        background: -webkit-gradient(
+          radial,
+          center center,
+          0px,
+          center center,
+          100%,
+          color-stop(0%, rgba(0, 0, 0, 0.4)),
+          color-stop(100%, rgba(0, 0, 0, 0.9))
+        );
+        background: -webkit-radial-gradient(
+          center,
+          ellipse cover,
+          rgba(0, 0, 0, 0.4) 0,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        background: -o-radial-gradient(
+          center,
+          ellipse cover,
+          rgba(0, 0, 0, 0.4) 0,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        background: -ms-radial-gradient(
+          center,
+          ellipse cover,
+          rgba(0, 0, 0, 0.4) 0,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        background: radial-gradient(
+          center,
+          ellipse cover,
+          rgba(0, 0, 0, 0.4) 0,
+          rgba(0, 0, 0, 0.9) 100%
+        );
+        filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000',endColorstr='#e6000000',GradientType=1)";
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+        filter: alpha(opacity=50);
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+      .introjs-fixParent {
+        z-index: auto !important;
+        opacity: 1 !important;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important;
+      }
+
+      .introjs-showElement,
+      tr.introjs-showElement > td,
+      tr.introjs-showElement > th {
+        z-index: 9999999 !important;
+      }
+
+      .introjs-disableInteraction {
+        z-index: 99999999 !important;
+        position: absolute;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      .introjs-relativePosition,
+      tr.introjs-showElement > td,
+      tr.introjs-showElement > th {
+        position: relative;
+      }
+
+      .introjs-helperLayer {
+        box-sizing: content-box;
+        position: absolute;
+        z-index: 9999998;
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #777;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+      .introjs-tooltipReferenceLayer {
+        box-sizing: content-box;
+        position: absolute;
+        visibility: hidden;
+        z-index: 10000000;
+        background-color: transparent;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+
+      .introjs-helperLayer *,
+      .introjs-helperLayer *:before,
+      .introjs-helperLayer *:after {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+
+      .introjs-helperNumberLayer {
+        box-sizing: content-box;
+        position: absolute;
+        visibility: visible;
+        top: -16px;
+        left: -16px;
+        z-index: 9999999999 !important;
+        padding: 2px;
+        font-family: Arial, verdana, tahoma;
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        background: #ff3019;
+        /* Old browsers */
+        background: -webkit-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, #ff3019),
+          color-stop(100%, #cf0404)
+        );
+        /* Chrome,Safari4+ */
+        background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+        /* FF3.6+ */
+        background: -ms-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+        /* IE10+ */
+        background: -o-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+        /* Opera 11.10+ */
+        background: linear-gradient(to bottom, #ff3019 0%, #cf0404 100%);
+        /* W3C */
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border: 3px solid white;
+        border-radius: 50%;
+        filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0)";
+        /* IE6-9 */
+        filter: 'progid:DXImageTransform.Microsoft.Shadow(direction=135, strength=2, color=ff0000)';
+        /* IE10 text shadows */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      }
+
+      .introjs-arrow {
+        border: 5px solid white;
+        content: '';
+        position: absolute;
+      }
+
+      .introjs-arrow.top {
+        top: -10px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: white;
+        border-left-color: transparent;
+      }
+
+      .introjs-arrow.top-right {
+        top: -10px;
+        right: 10px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: white;
+        border-left-color: transparent;
+      }
+
+      .introjs-arrow.top-middle {
+        top: -10px;
+        left: 50%;
+        margin-left: -5px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: white;
+        border-left-color: transparent;
+      }
+
+      .introjs-arrow.right {
+        right: -10px;
+        top: 10px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: white;
+      }
+
+      .introjs-arrow.right-bottom {
+        bottom: 10px;
+        right: -10px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: white;
+      }
+
+      .introjs-arrow.bottom {
+        bottom: -10px;
+        border-top-color: white;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+
+      .introjs-arrow.left {
+        left: -10px;
+        top: 10px;
+        border-top-color: transparent;
+        border-right-color: white;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+
+      .introjs-arrow.left-bottom {
+        left: -10px;
+        bottom: 10px;
+        border-top-color: transparent;
+        border-right-color: white;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+
+      .introjs-tooltip {
+        box-sizing: content-box;
+        position: absolute;
+        visibility: visible;
+        padding: 10px;
+        background-color: white;
+        min-width: 200px;
+        max-width: 300px;
+        border-radius: 3px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+        -webkit-transition: opacity 0.1s ease-out;
+        -moz-transition: opacity 0.1s ease-out;
+        -ms-transition: opacity 0.1s ease-out;
+        -o-transition: opacity 0.1s ease-out;
+        transition: opacity 0.1s ease-out;
+      }
+
+      .introjs-tooltipbuttons {
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      /*
+ Buttons style by http://nicolasgallagher.com/lab/css3-github-buttons/
+ Changed by Afshin Mehrabani
+*/
+      .introjs-button {
+        box-sizing: content-box;
+        position: relative;
+        overflow: visible;
+        display: inline-block;
+        padding: 0.3em 0.8em;
+        border: 1px solid #d4d4d4;
+        margin: 0;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 #fff;
+        font: 11px / normal sans-serif;
+        color: #333;
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        background-color: #ececec;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+        background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+        background-image: -o-linear-gradient(#f4f4f4, #ececec);
+        background-image: linear-gradient(#f4f4f4, #ececec);
+        -webkit-background-clip: padding;
+        -moz-background-clip: padding;
+        -o-background-clip: padding-box;
+        /*background-clip: padding-box;*/
+        /* commented out due to Opera 11.10 bug */
+        -webkit-border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        border-radius: 0.2em;
+        /* IE hacks */
+        zoom: 1;
+        *display: inline;
+        margin-top: 10px;
+      }
+
+      .introjs-button:hover {
+        border-color: #bcbcbc;
+        text-decoration: none;
+        box-shadow: 0px 1px 1px #e3e3e3;
+      }
+
+      .introjs-button:focus,
+      .introjs-button:active {
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ececec), to(#f4f4f4));
+        background-image: -moz-linear-gradient(#ececec, #f4f4f4);
+        background-image: -o-linear-gradient(#ececec, #f4f4f4);
+        background-image: linear-gradient(#ececec, #f4f4f4);
+      }
+
+      /* overrides extra padding on button elements in Firefox */
+      .introjs-button::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+      }
+
+      .introjs-skipbutton {
+        box-sizing: content-box;
+        margin-right: 5px;
+        color: #7a7a7a;
+      }
+
+      .introjs-prevbutton {
+        -webkit-border-radius: 0.2em 0 0 0.2em;
+        -moz-border-radius: 0.2em 0 0 0.2em;
+        border-radius: 0.2em 0 0 0.2em;
+        border-right: none;
+      }
+
+      .introjs-prevbutton.introjs-fullbutton {
+        border: 1px solid #d4d4d4;
+        -webkit-border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        border-radius: 0.2em;
+      }
+
+      .introjs-nextbutton {
+        -webkit-border-radius: 0 0.2em 0.2em 0;
+        -moz-border-radius: 0 0.2em 0.2em 0;
+        border-radius: 0 0.2em 0.2em 0;
+      }
+
+      .introjs-nextbutton.introjs-fullbutton {
+        -webkit-border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        border-radius: 0.2em;
+      }
+
+      .introjs-disabled,
+      .introjs-disabled:hover,
+      .introjs-disabled:focus {
+        color: #9a9a9a;
+        border-color: #d4d4d4;
+        box-shadow: none;
+        cursor: default;
+        background-color: #f4f4f4;
+        background-image: none;
+        text-decoration: none;
+      }
+
+      .introjs-hidden {
+        display: none;
+      }
+
+      .introjs-bullets {
+        text-align: center;
+      }
+
+      .introjs-bullets ul {
+        box-sizing: content-box;
+        clear: both;
+        margin: 15px auto 0;
+        padding: 0;
+        display: inline-block;
+      }
+
+      .introjs-bullets ul li {
+        box-sizing: content-box;
+        list-style: none;
+        float: left;
+        margin: 0 2px;
+      }
+
+      .introjs-bullets ul li a {
+        box-sizing: content-box;
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #ccc;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .introjs-bullets ul li a:hover {
+        background: #999;
+      }
+
+      .introjs-bullets ul li a.active {
+        background: #999;
+      }
+
+      .introjs-progress {
+        box-sizing: content-box;
+        overflow: hidden;
+        height: 10px;
+        margin: 10px 0 5px 0;
+        border-radius: 4px;
+        background-color: #ecf0f1;
+      }
+
+      .introjs-progressbar {
+        box-sizing: content-box;
+        float: left;
+        width: 0%;
+        height: 100%;
+        font-size: 10px;
+        line-height: 10px;
+        text-align: center;
+        background-color: #08c;
+      }
+
+      .introjsFloatingElement {
+        position: absolute;
+        height: 0;
+        width: 0;
+        left: 50%;
+        top: 50%;
+      }
+
+      .introjs-fixedTooltip {
+        position: fixed;
+      }
+
+      .introjs-hint {
+        box-sizing: content-box;
+        position: absolute;
+        background: transparent;
+        width: 20px;
+        height: 15px;
+        cursor: pointer;
+      }
+
+      .introjs-hint:focus {
+        border: 0;
+        outline: 0;
+      }
+
+      .introjs-hidehint {
+        display: none;
+      }
+
+      .introjs-fixedhint {
+        position: fixed;
+      }
+
+      .introjs-hint:hover > .introjs-hint-pulse {
+        border: 5px solid rgba(60, 60, 60, 0.57);
+      }
+
+      .introjs-hint-pulse {
+        box-sizing: content-box;
+        width: 10px;
+        height: 10px;
+        border: 5px solid rgba(60, 60, 60, 0.27);
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        background-color: rgba(136, 136, 136, 0.24);
+        z-index: 10;
+        position: absolute;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      .introjs-hint-no-anim .introjs-hint-dot {
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
+      }
+
+      .introjs-hint-dot {
+        box-sizing: content-box;
+        border: 10px solid rgba(146, 146, 146, 0.36);
+        background: transparent;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        border-radius: 60px;
+        height: 50px;
+        width: 50px;
+        -webkit-animation: introjspulse 3s ease-out;
+        -moz-animation: introjspulse 3s ease-out;
+        animation: introjspulse 3s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        z-index: 1;
+        opacity: 0;
+      }
+
+      @-webkit-keyframes introjspulse {
+        0% {
+          -webkit-transform: scale(0);
+          opacity: 0;
+        }
+        25% {
+          -webkit-transform: scale(0);
+          opacity: 0.1;
+        }
+        50% {
+          -webkit-transform: scale(0.1);
+          opacity: 0.3;
+        }
+        75% {
+          -webkit-transform: scale(0.5);
+          opacity: 0.5;
+        }
+        100% {
+          -webkit-transform: scale(1);
+          opacity: 0;
+        }
+      }
+      @-moz-keyframes introjspulse {
+        0% {
+          -moz-transform: scale(0);
+          opacity: 0;
+        }
+        25% {
+          -moz-transform: scale(0);
+          opacity: 0.1;
+        }
+        50% {
+          -moz-transform: scale(0.1);
+          opacity: 0.3;
+        }
+        75% {
+          -moz-transform: scale(0.5);
+          opacity: 0.5;
+        }
+        100% {
+          -moz-transform: scale(1);
+          opacity: 0;
+        }
+      }
+      @keyframes introjspulse {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        25% {
+          transform: scale(0);
+          opacity: 0.1;
+        }
+        50% {
+          transform: scale(0.1);
+          opacity: 0.3;
+        }
+        75% {
+          transform: scale(0.5);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+      .introjs-helperLayer {
+        background-color: #fff;
+        border: 0 none;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 0 0 none;
+        box-shadow: 0 0 0 none;
+        outline: #0069cc 2px solid;
+        -webkit-transition-property: none;
+        -moz-transition-property: none;
+        -o-transition-property: none;
+        transition-property: none;
+      }
+
+      .introjs-tooltipReferenceLayer {
+        -webkit-transition-property: none;
+        -moz-transition-property: none;
+        -o-transition-property: none;
+        transition-property: none;
+      }
+
+      .introjs-helperNumberLayer {
+        background: #0597ff;
+        border: 3px solid white;
+        text-shadow: none;
+      }
+
+      .introjs-arrow {
+        border: 5px solid #0597ff;
+      }
+
+      .introjs-arrow.top {
+        border-bottom-color: #0597ff;
+      }
+
+      .introjs-arrow.top-right {
+        border-bottom-color: #0597ff;
+      }
+
+      .introjs-arrow.top-middle {
+        border-bottom-color: #0597ff;
+      }
+
+      .introjs-arrow.right {
+        border-left-color: #0597ff;
+      }
+
+      .introjs-arrow.right-bottom {
+        border-left-color: #0597ff;
+      }
+
+      .introjs-arrow.bottom {
+        border-top-color: #0597ff;
+      }
+
+      .introjs-arrow.left {
+        border-right-color: #0597ff;
+      }
+
+      .introjs-arrow.left-bottom {
+        border-right-color: #0597ff;
+      }
+
+      .introjs-tooltip {
+        background-color: #0597ff;
+        -webkit-transition-property: none;
+        -moz-transition-property: none;
+        -o-transition-property: none;
+        transition-property: none;
+      }
+
+      .introjs-button {
+        color: white;
+        background: #0597ff;
+        border: 1px solid white;
+        text-shadow: none;
+      }
+
+      .introjs-button:hover {
+        color: #9ed7ff;
+      }
+
+      .introjs-button:active,
+      .introjs-button:focus {
+        color: white;
+        background: #0597ff;
+        border-color: white;
+      }
+
+      .introjs-skipbutton {
+        color: white;
+      }
+      .introjs-skipbutton:hover {
+        color: #9ed7ff;
+      }
+
+      .introjs-disabled,
+      .introjs-disabled:focus,
+      .introjs-disabled:hover {
+        color: #0597ff;
+        border-color: #0597ff;
+        background-color: #6bc1ff;
+      }
+
+      .introjs-bullets ul li a {
+        background: #fff;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+      }
+      .introjs-bullets ul li a:hover {
+        background: #6bc1ff;
+      }
+      .introjs-bullets ul li a.active {
+        background: #000;
+      }
+
+      .introjs-hint:hover > .introjs-hint-pulse {
+        border: 0 none;
+      }
+
+      .introjs-hint-pulse {
+        -webkit-transition-property: none;
+        -moz-transition-property: none;
+        -o-transition-property: none;
+        transition-property: none;
+      }
+
+      .introjs-tooltiptext {
+        color: white;
+        font-weight: 500;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .step1 + .introjs-tooltipReferenceLayer {
+          margin-top: 9rem;
+        }
+
+        .step2 + .introjs-tooltipReferenceLayer {
+          margin-top: 9rem;
+        }
+
+        .step3 + .introjs-tooltipReferenceLayer {
+          margin-top: 8rem;
+        }
+
+        .step4 + .introjs-tooltipReferenceLayer {
+          margin-top: 8rem;
+        }
+
+        .step5 + .introjs-tooltipReferenceLayer {
+          margin-top: 7rem;
+        }
+
+        .step6 + .introjs-tooltipReferenceLayer {
+          margin-top: 7rem;
+        }
+
+        .step7 + .introjs-tooltipReferenceLayer {
+          margin-top: 0;
+        }
+
+        .step8 + .introjs-tooltipReferenceLayer {
+          margin-top: 6rem;
+        }
+
+        .step9 + .introjs-tooltipReferenceLayer {
+          margin-top: 0;
+        }
+
+        .step10 + .introjs-tooltipReferenceLayer {
+          margin-top: -6rem;
+        }
+
+        .step11 + .introjs-tooltipReferenceLayer {
+          margin-top: 5rem;
+        }
+
+        .step12 + .introjs-tooltipReferenceLayer {
+          margin-top: -6rem;
+        }
+
+        .step13 + .introjs-tooltipReferenceLayer {
+          margin-top: -17rem;
+        }
+      }
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="/assets/css/print.css" media="print" /> -->
+
+    <style>
+      html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      main,
+      menu,
+      nav,
+      section,
+      summary {
+        display: block;
+      }
+
+      audio,
+      canvas,
+      progress,
+      video {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+
+      [hidden],
+      template {
+        display: none;
+      }
+
+      a {
+        background-color: transparent;
+      }
+
+      a:active,
+      a:hover {
+        outline: 0;
+      }
+
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+      }
+
+      b,
+      strong {
+        font-weight: inherit;
+      }
+
+      b,
+      strong {
+        font-weight: bolder;
+      }
+
+      dfn {
+        font-style: italic;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+
+      mark {
+        background-color: #ff0;
+        color: #000;
+      }
+
+      small {
+        font-size: 80%;
+      }
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      img {
+        border: 0;
+      }
+
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      figure {
+        margin: 1em 40px;
+      }
+
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+
+      pre {
+        overflow: auto;
+      }
+
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font: inherit;
+        margin: 0;
+      }
+
+      button {
+        overflow: visible;
+      }
+
+      button,
+      select {
+        text-transform: none;
+      }
+
+      button,
+      html input[type='button'],
+      input[type='reset'],
+      input[type='submit'] {
+        -webkit-appearance: button;
+        cursor: pointer;
+      }
+
+      button[disabled],
+      html input[disabled] {
+        cursor: default;
+      }
+
+      button::-moz-focus-inner,
+      input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+
+      button:-moz-focusring,
+      input:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+
+      input {
+        line-height: normal;
+      }
+
+      input[type='checkbox'],
+      input[type='radio'] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        height: auto;
+      }
+
+      input[type='search'] {
+        -webkit-appearance: textfield;
+      }
+
+      input[type='search']::-webkit-search-cancel-button,
+      input[type='search']::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      fieldset {
+        border: 1px solid #c0c0c0;
+        margin: 0 2px;
+        padding: 0.35em 0.625em 0.75em;
+      }
+
+      legend {
+        border: 0;
+        padding: 0;
+      }
+
+      textarea {
+        overflow: auto;
+      }
+
+      optgroup {
+        font-weight: bold;
+      }
+
+      .no_select {
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -khtml-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+      }
+
+      .kill_mouse_touch {
+        pointer-events: none !important;
+      }
+
+      /**
+* Conditional Media Query Mixin by @sheiko (http://dsheiko.com)
+* The problem this mixin solves is explained there
+* http://css-tricks.com/conditional-media-query-mixins/
+* https://github.com/dsheiko
+* MIT license: http://www.opensource.org/licenses/mit-license.php
+*/
+      html {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-x: hidden !important;
+        font-size: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        line-height: 1.4446;
+        font-weight: 400;
+      }
+      @media only screen and (min-width: 601px) {
+        html {
+          font-size: 16px;
+        }
+      }
+      @media only screen and (min-width: 841px) {
+        html {
+          font-size: 17px;
+        }
+      }
+      @media only screen and (min-width: 1261px) {
+        html {
+          font-size: 18px;
+        }
+      }
+      @media only screen and (min-width: 601px) {
+        html {
+          font-weight: 300;
+        }
+      }
+
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+      }
+
+      a,
+      button,
+      input,
+      label,
+      select,
+      textarea {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      a:focus,
+      button:focus,
+      input:focus,
+      label:focus,
+      select:focus,
+      textarea:focus {
+        outline: -webkit-focus-ring-color auto 0;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+
+      .hide {
+        display: none !important;
+      }
+
+      .group:after,
+      .group:before {
+        content: '';
+        display: table;
+      }
+
+      .group:after {
+        clear: both;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .alignright {
+        text-align: right;
+      }
+
+      .full_width {
+        width: 100%;
+      }
+
+      /* hacked on: CSS-Tricks Example by Chris Coyier http://css-tricks.com */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0 1rem;
+        line-height: 1.4446;
+        font-weight: 300;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+      }
+      @media only screen and (min-width: 601px) {
+        body {
+          font-size: 16px;
+        }
+      }
+      @media only screen and (min-width: 841px) {
+        body {
+          font-size: 17px;
+          margin: 0 2rem;
+        }
+      }
+      @media only screen and (min-width: 1261px) {
+        body {
+          font-size: 18px;
+        }
+      }
+
+      #download_invoice_block {
+        max-width: 840px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0597ff;
+        padding: 1px;
+        font-weight: 500;
+      }
+
+      textarea {
+        border: 0;
+        overflow: hidden;
+        resize: none;
+        font-size: inherit;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 1.4446;
+        display: block;
+        width: auto;
+      }
+
+      .header {
+        font-weight: 500;
+        height: 2rem;
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        padding: 0.5rem;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+
+      .header_wrap {
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+      }
+
+      .customer_data,
+      .own_data {
+        float: left;
+        height: 150px;
+        min-width: 300px;
+        padding-bottom: 1rem;
+      }
+
+      #customer {
+        overflow: hidden;
+      }
+
+      .notes {
+        text-align: center;
+        border-top: 1px solid black;
+        padding-bottom: 7rem;
+      }
+      .notes h5 {
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        padding: 8px 0;
+        margin: 0 0 8px;
+      }
+      .notes textarea {
+        width: 100%;
+        text-align: center;
+      }
+
+      .invoice_logo {
+        width: 100px;
+      }
+
+      .bottom_nav {
+        position: fixed;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        height: 50px;
+        background-color: black;
+      }
+      .bottom_nav a {
+        display: block;
+        color: white;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+      }
+      .bottom_nav:hover {
+        background-color: #0597ff;
+      }
+
+      .price {
+        white-space: nowrap;
+      }
+
+      .blue_bg {
+        background-color: #0597ff;
+      }
+      .blue_bg .bottom_nav a {
+        color: white;
+      }
+
+      .qr_wrap {
+        margin-top: 1rem;
+        margin-bottom: 5px;
+        height: 240px;
+        padding: 10px 10px 30px;
+        background-color: white;
+      }
+      .qr_wrap .url {
+        display: block;
+        color: black;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      .qr {
+        height: 240px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 36 261 261"><path d="M45 108h-9v9h9v-9zm0 18h-9v9h9v-9zm0 54h-9v9h9v-9zM99 36H36v63h63V36zm-9 54H45V45h45v45zm-45 63h9v-9h-9v9zm36-99H54v27h27V54zm0 72v-9H63v27h9v-18h9zM54 279h27v-27H54v27zm-18 18h63v-63H36v63zm9-54h45v45H45v-45zm45-135v9h9v-9h-9zm0 18v9h9v-9h-9zm9 18h-9v9h9v-9zm-9 81h9v-9h-9v9zm18-108h-9v9h9v-9zm0 45h9v-18h18v-18h-9v-9h9v-9h-18V90h-9v27h9v18H99v9h9v18zm0 45v-27H90v-9h9v-9h-9v-9h-9v-9h-9v18h9v9h-9v-9h-9v9h-9v9h27v9h18v9H81v9h-9v9h-9v-9h9v-9h9v-9H54v18h-9v18h36v-9h9v-9h9v9h18v-9h-9zm18 54h-9v9h9v-9zm0 18h-9v9h-9v9h27v-9h-9v-9zm0-180h9v-9h-9v9zm9-36h9V45h27v9h9V36h-54v9h9v18zm9 63v-9h-9v9h9zm-9 162h27v-9h-9v-18h-18v27zm18-180h-9v9h9v-9zm9-18v9h9V81h9V63h-9v-9h-9v18h-27v-9h-18v-9h9v-9h-18v27h18v9h9v9h9v9h9v-9h9zm0 9h-9v9h9v-9zm9 27v-9h9v-9h-18v18h9zm0 171v-9h-9v9h9zm9-18h-9v9h9v-9zm9-216v-9h-9v9h9zm0 234v-9h-9v9h9zm0-162h9v-9h18v-9h-18v-9h-9v27zm0 45v9h9v-9h-9zm9-117h-9v18h-9v18h9v-9h9v-9h27V63h-9v9h-9V45h-9v-9h-9v18h9v9zm9 45V90h-9v18h9zm-9 189h18v-9h-18v9zm27-252h-9v9h9v-9zm0 90v-9h-9v9h9zm18-27h-18V90h-9v27h27v-9zm0 126h-9v9h9v-9zm9-54v-9h-9v9h9zm9-63h-9v18h9v-18zm0 72h-63v9h9v9h9v9h-18v9h-9v-36h-9v18h-9v-9h-27v-36h9v18h9v9h18v-9h-9v-9h9v9h9v-9h9v9h9v-18h-36v-18h18v-9h-27v9h-9v9h-18v9h-18v9h18v9h-9v9h9v9h-9v-9h-9v18h18v18h9v-9h9v-9h9v9h18v18h-18v-9h-18v9h-18v-18h-9v9h-9v9h9v9h9v9h27v9h9v-18h27v9h-18v9h9v9h9v-9h9v-9h9v9h-9v18h18v-9h9v27h18v-9h-9v-9h27v9h9v9h9v-18h9v-27h9v-9h-18v18h-9v-9h-9v-9h18v-9h-9v-9h-9v-9h-27v-9h-9v-9h9v9h9v-9h9v9h18v-9h-9v-9zm-45 45h-9v9h-9v-9h9v-9h9v9zm45 36h-27v-9h27v9zm-9-45v27h-27v-27h27zm0 72h9v-9h-9v9zm27-243h-27v27h27V54zm-9 90v-9h-9v9h9zm-9 9h-9v-18h-9v-9h-9v36h-9v-9h-9v-18h-9v27h9v9h27v-9h9v9h18v9h-9v9h9v9h18v9h9v-18h-18v-27h-18v-9zm9-27h18v-18h-27v9h9v9zm27 90h-27v9h27v-9zM234 36v63h63V36h-63zm54 54h-45V45h45v45zm0 63h-9v9h18v-18h-9v9zm0 27h9v-9h-9v9zm9 108v-9h-9v9h9z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .col.total-value textarea:focus,
+      .col.total-value textarea:hover,
+      .delete:hover,
+      textarea:focus,
+      textarea:hover {
+        background-color: #d1ecff;
+        cursor: pointer;
+      }
+
+      .delete_wrap {
+        position: absolute;
+        bottom: 6px;
+        right: 0;
+      }
+      .delete_wrap .delete {
+        display: block;
+        color: #0597ff;
+        background-color: white;
+        text-decoration: none;
+        padding: 2px;
+        border: 1px solid #0597ff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      .addrow:before {
+        content: '+';
+        display: inline-block;
+        color: #0597ff;
+        background-color: white;
+        text-decoration: none;
+        position: absolute;
+        padding: 2px;
+        border: 1px solid #0597ff;
+        top: 8px;
+        right: 0;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 400;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+        text-align: center;
+      }
+      @media only screen and (max-width: 840px) {
+        .addrow:before {
+          top: 11px;
+          right: -15px;
+        }
+      }
+
+      .addrow {
+        display: block;
+        min-width: 100%;
+        height: 40px;
+        visibility: visible;
+      }
+
+      .hiderow:hover {
+        cursor: pointer;
+      }
+      .hiderow:hover .addrow {
+        color: black;
+        background: #d1ecff;
+      }
+      .hiderow .no_tag {
+        position: relative;
+        padding-top: 4px;
+      }
+      @media only screen and (max-width: 840px) {
+        .hiderow {
+          border-bottom: 1px solid #cccccc;
+          height: 28px;
+          margin-bottom: 3rem;
+        }
+      }
+
+      .sums {
+        margin-top: 1rem;
+      }
+      @media only screen and (min-width: 601px) {
+        .sums .blank {
+          display: none;
+        }
+      }
+
+      .total-line {
+        border-right: 0;
+        text-align: right;
+        font-weight: 500;
+      }
+      @media only screen and (min-width: 601px) {
+        .total-line {
+          text-align: left;
+        }
+      }
+      .amount_paid .total-line {
+        color: #0597ff;
+      }
+
+      .col.total-value {
+        border-left: 0;
+        padding: 10px 0;
+      }
+      .col.total-value textarea {
+        height: 20px;
+        background: none;
+        text-align: right;
+        width: 100%;
+      }
+
+      .col.blank {
+        width: 100%;
+      }
+
+      .table {
+        text-align: left;
+        display: table;
+        width: 100%;
+      }
+      .table .header_row .col {
+        font-weight: 500;
+      }
+      .table .row {
+        position: relative;
+        display: table-row;
+      }
+      .table .col {
+        display: table-cell;
+        border-bottom: 1px solid #cccccc;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        width: auto;
+        margin-right: 1rem;
+      }
+      .table .item,
+      .table .item textarea {
+        width: 120px;
+        max-width: 120px;
+      }
+      .table .description,
+      .table .description textarea {
+        width: 300px;
+        max-width: 300px;
+      }
+      .table .unitcost,
+      .table .unitcost textarea {
+        width: 120px;
+        max-width: 120px;
+      }
+      .table .quantity,
+      .table .quantity textarea {
+        width: 50px;
+        max-width: 50px;
+      }
+      .table .totalprice {
+        position: relative;
+        width: 130px;
+        max-width: 130px;
+        text-align: right;
+      }
+
+      .meta {
+        padding-top: 0.2rem;
+        max-width: 350px;
+        float: right;
+      }
+
+      .meta .row,
+      .sums .row {
+        justify-content: space-between;
+      }
+
+      .editable_indicator {
+        color: #0597ff;
+      }
+
+      .meta_head {
+        font-weight: 500;
+      }
+
+      .responsive_table {
+        margin-top: 2rem;
+      }
+      @media only screen and (max-width: 840px) {
+        .responsive_table {
+          display: block;
+          margin-top: 5rem;
+        }
+        .responsive_table .col,
+        .responsive_table .row {
+          display: block;
+          width: 100%;
+          min-width: 100%;
+          border-bottom: 0 none;
+        }
+        .responsive_table .header_row {
+          display: none;
+        }
+        .responsive_table .col {
+          border-right: 1px solid #0597ff;
+          padding-right: 10px;
+        }
+        .responsive_table textarea {
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          margin-top: 5px;
+        }
+        .responsive_table .totalprice {
+          text-align: left;
+          margin-bottom: 2rem;
+          border-right: 0 none;
+        }
+        .responsive_table .delete_wrap {
+          bottom: 15px;
+          right: -15px;
+        }
+        .responsive_table .col:before {
+          font-weight: 500;
+          margin-right: 0.5rem;
+          display: inline-block;
+          border-bottom: 1px solid #cccccc;
+          width: 100%;
+        }
+        .responsive_table .col:nth-of-type(1):before {
+          content: 'Item';
+          color: #0597ff;
+        }
+        .responsive_table .col.no_tag:before,
+        .responsive_table .hiderow .col:nth-of-type(1):before {
+          content: '';
+          display: none;
+        }
+        .responsive_table .col:nth-of-type(2):before {
+          content: 'Description';
+          color: #0597ff;
+        }
+        .responsive_table .col:nth-of-type(3):before {
+          content: 'Unit cost';
+          color: #0597ff;
+        }
+        .responsive_table .col:nth-of-type(4):before {
+          content: 'Quantity';
+          color: #0597ff;
+        }
+        .responsive_table .col:nth-of-type(5):before {
+          content: 'Price';
+          color: black;
+        }
+      }
+
+      .col_span_all {
+        column-span: all;
+      }
+
+      #logo {
+        text-align: right;
+        float: right;
+        position: relative;
+        max-width: 500px;
+        max-height: 180px;
+        overflow: hidden;
+        display: none;
+      }
+      @media only screen and (min-width: 841px) {
+        #logo {
+          display: block;
+        }
+      }
+
+      #logo.edit,
+      #logo:hover {
+        border: 1px solid #cccccc;
+        margin-top: 0;
+        max-height: 125px;
+        cursor: pointer;
+      }
+
+      #logoctr {
+        display: none;
+      }
+
+      #logo.edit #logoctr,
+      #logo:hover #logoctr {
+        display: block;
+        text-align: right;
+        padding: 0 0.3333333333rem;
+        cursor: pointer;
+      }
+
+      #logohelp {
+        text-align: left;
+        display: none;
+        padding: 0.6666666667rem 0.3333333333rem;
+      }
+      #logohelp input {
+        margin-bottom: 0.3333333333rem;
+      }
+      .edit #logohelp {
+        display: block;
+      }
+
+      .edit #cancel-logo,
+      .edit #save-logo {
+        display: inline;
+      }
+
+      #cancel-logo,
+      #save-logo,
+      .edit #change-logo,
+      .edit #delete-logo,
+      .edit #image {
+        display: none;
+      }
+
+      .help {
+        position: static;
+        top: 0;
+        right: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        height: 50px;
+        background-color: #0597ff;
+      }
+      .help svg {
+        display: none;
+      }
+      .help a {
+        display: block;
+        color: white;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        color: white;
+      }
+      @media only screen and (min-width: 601px) {
+        .help {
+          position: fixed;
+          z-index: 100;
+          top: 1rem;
+          right: 1rem;
+          width: 60px;
+          height: 60px;
+          background-color: #0597ff;
+          border-radius: 50%;
+        }
+        .help a {
+          display: block;
+          color: white;
+          line-height: 60px;
+          text-align: center;
+        }
+        .help svg {
+          display: block;
+        }
+        .help .small_screen_text {
+          display: none;
+        }
+      }
+
+      .bottom_nav {
+        display: none;
+      }
+
+      * {
+        color: black !important;
+      }
+    </style>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+    <meta name="apple-mobile-web-app-title" content="Send Bill!" />
+    <meta name="application-name" content="Send Bill!" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="theme-color" content="#000000" />
+  </head>
+
+  <body id="body">
+    <div class="help" id="help">
+      <a id="help_button" class="" onclick="startHelp()" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M0 0h24v24h-24z" fill="none" />
+          <path
+            fill="white"
+            d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92c-.72.73-1.17 1.33-1.17 2.83h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" />
+        </svg>
+        <div class="small_screen_text">Help</div>
+      </a>
+
+      <a id="reload_button" class="hide" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            fill="white"
+            d="M17.65 6.35c-1.45-1.45-3.44-2.35-5.65-2.35-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78l-3.22 3.22h7v-7l-2.35 2.35z" />
+          <path d="M0 0h24v24h-24z" fill="none" />
+        </svg>
+        <div class="small_screen_text after_download">Make a new invoice</div>
+      </a>
+    </div>
+
+    <div id="download_invoice_block" class="group">
+      <div class="header_wrap">
+        <textarea rows="1" class="header">INVOICE</textarea>
+      </div>
+
+      <div id="identity">
+        <textarea class="own_data">
+YourCompany
+Street Address
+Zipcode City State Country
+Tel: (+44) 123-456-7890
+youremailaddress@email.com
+                </textarea
+        >
+
+        <div id="logo">
+          <div id="logoctr">
+            <!-- <a href="javascript:;" id="change-logo" title="Change logo">Change Logo</a> -->
+            <a href="javascript:;" id="save-logo" title="Save changes">Save</a>
+
+            <a href="javascript:;" id="delete-logo" title="Delete logo">Delete Logo</a>
+            <a href="javascript:;" id="cancel-logo" title="Cancel changes">Cancel</a>
+          </div>
+
+          <div id="logohelp">
+            <input id="imageloc" type="text" size="50" value="" /><br />
+            (max width: 540px, max height: 100px)
+          </div>
+
+          <div class="invoice_logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+              <path
+                fill="#FFF"
+                d="M763.55 338.662l-119.265-51.11V128.57c0-29.982-24.303-54.286-54.285-54.286H210c-29.98 0-54.286 24.304-54.286 54.285v158.98L36.45 338.663C26.47 342.94 20 352.752 20 363.612v307.815c0 29.982 24.304 54.287 54.286 54.287h651.43c29.98 0 54.284-24.305 54.284-54.287V363.61c0-10.858-6.47-20.67-16.45-24.948z" />
+              <path
+                fill="#000"
+                d="M763.55 338.662l-119.265-51.11V128.57c0-29.982-24.303-54.286-54.285-54.286H210c-29.98 0-54.286 24.304-54.286 54.285v158.98L36.45 338.663C26.47 342.94 20 352.752 20 363.612v307.815c0 29.982 24.304 54.287 54.286 54.287h651.43c29.98 0 54.284-24.305 54.284-54.287V363.61c0-10.858-6.47-20.67-16.45-24.948zm-13.08 23.924l-106.185 60.68V317.082l106.184 45.504zM182.856 128.57c.017-14.98 12.16-27.124 27.143-27.142h380c14.982.018 27.127 12.16 27.143 27.143v310.204L400 562.857 182.857 438.773V128.57zm-27.143 188.51v106.182L49.53 362.586l106.184-45.506zm597.143 354.348c-.016 14.982-12.158 27.127-27.143 27.145H74.286c-14.983-.018-27.126-12.162-27.144-27.145V392.484l339.39 193.938c8.346 4.77 18.59 4.77 26.933 0l339.393-193.938v278.944z" />
+              <path
+                fill="#000"
+                d="M421.324 237.152c10.457-.678 20.625 3.592 27.46 11.53 3.65 4.376 5.603 9.917 5.5 15.612 0 7.496 6.077 13.572 13.573 13.572s13.57-6.076 13.57-13.572c.13-11.66-3.795-23.004-11.092-32.1-11.89-14.752-30.078-22.986-49.012-22.186-30.606 0-65.68 21.93-73.83 81.43h-15.352c-7.493 0-13.57 6.074-13.57 13.57s6.077 13.572 13.57 13.572h13.572c-.023 9.076.573 18.146 1.783 27.143H332.14c-7.493 0-13.57 6.074-13.57 13.57s6.077 13.572 13.57 13.572h21.94c7.92 30.99 35.28 53.078 67.242 54.287 18.934.8 37.12-7.434 49.012-22.188 7.297-9.096 11.22-20.44 11.092-32.1 0-7.496-6.074-13.572-13.57-13.572s-13.572 6.076-13.572 13.572c.102 5.695-1.85 11.238-5.5 15.613-6.836 7.938-17.004 12.207-27.46 11.53-16.84-.733-31.637-11.4-37.654-27.144h29.9c7.497 0 13.57-6.076 13.57-13.572s-6.073-13.57-13.57-13.57h-38.318c-1.58-8.962-2.38-18.042-2.396-27.142h40.715c7.497 0 13.57-6.076 13.57-13.572s-6.073-13.57-13.57-13.57h-38.318c5.797-33.56 22.492-54.284 46.072-54.284z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div style="clear: both"></div>
+
+      <div id="customer">
+        <textarea rows="5" class="customer_data">
+YourClientCompany
+Street Address
+Zipcode City State Country
+Tel: (+44) 123-456-7890
+yourclientaddress@email.com
+                </textarea
+        >
+
+        <div class="table meta" id="meta">
+          <div class="row">
+            <div class="col meta_head editable_indicator">Invoice #</div>
+            <div class="col">
+              <textarea rows="1" class="alignright full_width">000123</textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col meta_head editable_indicator">Date</div>
+            <div class="col">
+              <textarea rows="1" id="date" class="alignright full_width">
+September 19, 2017</textarea
+              >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col meta_head">Amount Due</div>
+            <div class="col">
+              <div class="due alignright full_width">555.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="items" class="table five_col responsive_table">
+        <div class="row header_row">
+          <div class="col editable_indicator item">Item</div>
+          <div class="col editable_indicator description">Description</div>
+          <div class="col editable_indicator unitcost">Unit Cost</div>
+          <div class="col editable_indicator quantity">Qty</div>
+          <div class="col totalprice">Price</div>
+        </div>
+
+        <div class="row item-row">
+          <div class="col item" id="what1">
+            <textarea rows="3">Web Updates</textarea>
+          </div>
+
+          <div class="col description" id="what1details">
+            <textarea rows="3">
+Monthly web updates for paradiseholiday.com (Nov. 1 - Nov. 30, 2017)</textarea
+            >
+          </div>
+
+          <div class="col unitcost" id="what1price">
+            <textarea rows="1" class="cost">330.00</textarea>
+          </div>
+
+          <div class="col quantity" id="what1qty">
+            <textarea rows="1" class="qty">1</textarea>
+          </div>
+
+          <div class="col totalprice">
+            <span class="price">330.00</span>
+            <div class="delete_wrap guide_delete">
+              <a class="delete" href="#" title="Remove item">X</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row item-row">
+          <div class="col item">
+            <textarea rows="3">SSL Renewals</textarea>
+          </div>
+
+          <div class="col description">
+            <textarea rows="3">
+Yearly renewals of SSL certificates on main domain and several subdomains</textarea
+            >
+          </div>
+
+          <div class="col unitcost">
+            <textarea rows="1" class="cost">75.00</textarea>
+          </div>
+
+          <div class="col quantity">
+            <textarea rows="1" class="qty">3</textarea>
+          </div>
+
+          <div class="col totalprice">
+            <span class="price">225.00</span>
+            <div class="delete_wrap">
+              <a class="delete" href="#" title="Remove item">X</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hiderow" class="hiderow">
+        <div class="no_tag">
+          <a id="addrow" class="addrow" href="#" title="Add a row">Add a row</a>
+        </div>
+      </div>
+
+      <div class="table five_col sums">
+        <div class="row">
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col total-line">Subtotal</div>
+
+          <div class="col total-value">
+            <div id="subtotal" class="alignright">555.00</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col total-line">Total</div>
+
+          <div class="col total-value">
+            <div id="total" class="alignright">555.00</div>
+          </div>
+        </div>
+
+        <div class="row amount_paid">
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col total-line">Amount Paid</div>
+
+          <div class="col total-value alignright">
+            <textarea rows="1" id="paid" class="paid">0.00</textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col blank no_tag"></div>
+
+          <div class="col total-line balance">Balance Due</div>
+
+          <div class="col total-value balance">
+            <div class="due alignright">555.00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="notes">
+        <div class="header">Notes</div>
+
+        <textarea>
+NET 30 Days. Finance Charge of 3% will be made on unpaid balances after 30 days.</textarea
+        >
+      </div>
+    </div>
+
+    <div class="bottom_nav">
+      <a id="print_button" class="" onclick="downloadPdf()" href="#">Download Invoice PDF</a>
+      <a id="print_message" class="hide" onclick="downloadPdf()" href="#"
+        >You just downloaded the invoice PDF. This is how it looks. Click here to download it
+        again.</a
+      >
+    </div>
+
+    <script src="/js/intro.js"></script>
+    <script type="text/javascript">
+      function startHelp() {
+        var intro = introJs().setOption('keyboardNavigation', ' true ');
+        intro.setOptions({
+          steps: [
+            {
+              element: '.own_data',
+              intro: 'Fill <strong>your company</strong> details!',
+              position: 'bottom',
+              highlightClass: 'step1',
+            },
+            {
+              element: '.customer_data',
+              intro: 'Next, <strong>Client</strong> details...',
+              highlightClass: 'step2',
+            },
+            {
+              element: '#what1',
+              intro: '<strong>Type</strong> of job/product...',
+              highlightClass: 'step3',
+            },
+            {
+              element: '#what1details',
+              intro: '<strong>Job/product</strong> details...',
+              highlightClass: 'step4',
+            },
+            {
+              element: '#what1price',
+              intro: '<strong>Price</strong> per unit.',
+              highlightClass: 'step5',
+            },
+            {
+              element: '#what1qty',
+              intro: '<strong>How many</strong> units?',
+              highlightClass: 'step6',
+            },
+            {
+              element: '.guide_delete',
+              intro: '<strong>Delete</strong> this row.',
+              highlightClass: 'step7',
+            },
+            {
+              element: '#addrow',
+              intro: '<strong>Add rows</strong> as needed',
+              highlightClass: 'step8',
+            },
+            {
+              element: '#paid',
+              intro: '<strong>Upfront payment</strong> goes here!',
+              highlightClass: 'step9',
+            },
+            {
+              element: '.notes textarea',
+              intro: 'Edit the <strong>details</strong> here...',
+              position: 'top',
+              highlightClass: 'step10',
+            },
+            {
+              element: '.header_wrap .header',
+              intro: 'This title is editable too!',
+              position: 'bottom',
+              highlightClass: 'step11',
+            },
+            {
+              element: '.bottom_nav',
+              intro: 'Click to <strong>download your Invoice<strong>!',
+              position: 'top',
+              highlightClass: 'step12',
+            },
+            {
+              element: '.notes .header',
+              intro:
+                "Get it on your phone and share this webapp! <br><div class='qr_wrap group'><div class='qr'></div><div class='url'>https://bill.junglestar.org</div></div>",
+              position: 'top',
+              highlightClass: 'step13',
+            },
+          ],
+        });
+
+        intro.start();
+      }
+    </script>
+
+    <script>
+      function print_today() {
+        const now = new Date();
+        const months = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December',
+        ];
+        const date = (now.getDate() < 10 ? '0' : '') + now.getDate();
+
+        const today = `${months[now.getMonth()]} ${date}, ${now.getFullYear()}`;
+        return today;
+      }
+
+      function roundNumber(number, decimals) {
+        if (decimals < 1) {
+          return Math.round(number).toString();
+        } else {
+          const factor = Math.pow(10, decimals);
+          return (Math.round(number * factor) / factor).toFixed(decimals);
+        }
+      }
+
+      function update_total() {
+        let total = 0;
+        document.querySelectorAll('.price').forEach(function (el) {
+          const price = parseFloat(el.textContent);
+          if (!isNaN(price)) total += price;
+        });
+
+        total = roundNumber(total, 2);
+        document.getElementById('subtotal').textContent = total;
+        document.getElementById('total').textContent = total;
+
+        update_balance();
+      }
+
+      function update_balance() {
+        const total = parseFloat(document.getElementById('total').textContent);
+        const paid = parseFloat(document.getElementById('paid').value);
+        const due = roundNumber(total - paid, 2);
+
+        document.querySelectorAll('.due').forEach(function (el) {
+          el.textContent = due;
+        });
+      }
+
+      function update_price(event) {
+        const row = event.target.closest('.item-row');
+        const cost = parseFloat(row.querySelector('.cost').value);
+        const qty = parseFloat(row.querySelector('.qty').value);
+        const price = roundNumber(cost * qty, 2);
+
+        if (isNaN(price)) {
+          row.querySelector('.price').textContent = 'N/A';
+        } else {
+          row.querySelector('.price').textContent = price;
+        }
+
+        update_total();
+      }
+
+      function bind() {
+        document.querySelectorAll('.cost, .qty').forEach(function (el) {
+          el.addEventListener('blur', update_price);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('input').forEach(function (input) {
+          input.addEventListener('click', function () {
+            input.select();
+          });
+        });
+
+        document.getElementById('paid').addEventListener('blur', update_balance);
+
+        document.getElementById('addrow').addEventListener('click', function () {
+          const newRow = document.createElement('div');
+          newRow.classList.add('row', 'item-row');
+          newRow.innerHTML = `
+                    <div class="col item"><textarea rows="3">Item Name</textarea></div>
+                    <div class="col description"><textarea rows="3">Description</textarea></div>
+                    <div class="col unitcost"><textarea rows="1" class="cost">0</textarea></div>
+                    <div class="col quantity"><textarea rows="1" class="qty">0</textarea></div>
+                    <div class="col totalprice"><span class="price">0</span><div class="delete_wrap"><a class="delete" href="#" title="Remove item">X</a></div></div>
+                `;
+          document.querySelector('.item-row:last-of-type').after(newRow);
+          bind();
+        });
+
+        document.addEventListener('click', function (event) {
+          if (event.target.classList.contains('delete')) {
+            event.target.closest('.item-row').remove();
+            update_total();
+          }
+        });
+
+        bind();
+
+        document.getElementById('cancel-logo').addEventListener('click', function () {
+          document.getElementById('logo').classList.remove('edit');
+        });
+
+        document.getElementById('delete-logo').addEventListener('click', function () {
+          document.getElementById('logo').remove();
+        });
+
+        document.getElementById('change-logo').addEventListener('click', function () {
+          document.getElementById('logo').classList.add('edit');
+          document.getElementById('imageloc').value = document.getElementById('image').src;
+          document.getElementById('image').select();
+        });
+
+        document.getElementById('save-logo').addEventListener('click', function () {
+          document.getElementById('image').src = document.getElementById('imageloc').value;
+          document.getElementById('logo').classList.remove('edit');
+        });
+
+        document.getElementById('date').value = print_today();
+      });
+    </script>
+
+    <script src="/js/jspdf.min.js"></script>
+    <script src="/js/html2canvas.min.js"></script>
+    <script src="/js/html2pdf.js"></script>
+
+    <script>
+      const invoice = document.getElementById('download_invoice_block');
+
+      function swapStyleSheet(sheet) {
+        document.getElementById('pagestyle').setAttribute('href', sheet);
+      }
+
+      function formatPageForDownload() {
+        document.getElementById('print_button').onclick = () =>
+          swapStyleSheet('/assets/css/download.css');
+        document.getElementById('print_button').classList.toggle('hide');
+        document.getElementById('print_message').classList.toggle('hide');
+        document.querySelector('.bottom_nav').classList.toggle('blue_bg');
+        document.getElementById('help_button').classList.toggle('hide');
+        document.getElementById('reload_button').classList.toggle('hide');
+      }
+
+      function downloadPdf() {
+        formatPageForDownload();
+
+        html2pdf(invoice, {
+          filename: 'invoice.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { dpi: 300, letterRendering: true },
+          jsPDF: { unit: 'cm', format: 'a4', orientation: 'portrait' },
+        });
+      }
+    </script>
+  </body>
+</html>
