@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e72750bc-d967-40f5-ae62-919fb46cf636/deploy-status)](https://app.netlify.com/sites/docu/deploys)
 
-# BILL 2.0.9
+# BILL 2.0.10
 
 ## Bill is an on-the-fly invoice generator web app
 
