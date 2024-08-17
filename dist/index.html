@@ -1687,7 +1687,8 @@
         .guide_delete,
         .delete_wrap,
         .addrow,
-        .bottom_nav {
+        .bottom_nav,
+        #currency-selector {
           display: none !important;
         }
       }
@@ -1954,11 +1955,8 @@ Finance Charge of 3% will be made on unpaid balances after 30 days.
     </div>
 
     <div class="bottom_nav">
-      <a id="print_button" class="" onclick="downloadPdf()" href="#">Download Invoice PDF</a>
-      <a id="print_message" class="hide" onclick="downloadPdf()" href="#"
-        >You just downloaded the invoice PDF. This is how it looks. Click here to download it
-        again.</a
-      >
+      <a id="print_button" class="" onclick="window.print()" href="#PRINT">Download Invoice PDF</a>
+      <a id="print_message" class="hide" onclick="window.print()" href="#PRINT">How did it go?!</a>
     </div>
 
     <!--
