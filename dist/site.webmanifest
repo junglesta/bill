@@ -1,0 +1,19 @@
+{
+    "name": "BILL INVOICE",
+    "short_name": "BILL INVOICE",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=240817",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=240817",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

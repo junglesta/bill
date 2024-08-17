@@ -1,10 +1,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e72750bc-d967-40f5-ae62-919fb46cf636/deploy-status)](https://app.netlify.com/sites/docu/deploys)
 
-# BILL 2.0.8
+# BILL 2.0.9
 
 ## Bill is an on-the-fly invoice generator web app
 
-![Bill is an online Invoice Generator](bill_logo.png)
+![Bill is an online Invoice Generator](dist/bill_logo.png)
 
 #### Try it here [bill.junglestar.org](https://bill.junglestar.org)
 
