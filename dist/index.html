@@ -15,7 +15,7 @@
  site     : https://bill.junglestar.org
  email    : info@junglestar.org
  github   : https://github.com/junglesta/bill
- version  : 2.0.3
+ version  : 2.0.5
 
 
 
@@ -1831,7 +1831,7 @@ yourclientaddress@email.com
 
           <div class="col description" id="what1details">
             <textarea rows="3">
-Monthly web updates for simplerfaster.com (Jan. 1 - Jan. 31, 2024)</textarea
+Monthly updates for simplerfaster.com (Jan. 1 - Jan. 31, 2024)</textarea
             >
           </div>
 
@@ -1946,9 +1946,9 @@ Yearly renewals of SSL certificates on main domain and several subdomains</texta
       <div class="notes">
         <div class="header">Notes</div>
 
-        <textarea rows="3">
+        <textarea>
 NET 30 Days.
-Finance Charge of 3% will be made on unpaid balances after 30 days.
+3% Finance Charge on unpaid balances after 30 days.
 </textarea
         >
       </div>
@@ -2180,39 +2180,6 @@ Finance Charge of 3% will be made on unpaid balances after 30 days.
 
         document.getElementById('date').value = print_today();
       });
-    </script>
-
-    <script src="/jspdf.min.js"></script>
-    <script src="/html2canvas.min.js"></script>
-    <script src="/html2pdf.js"></script>
-
-    <script>
-      const invoice = document.getElementById('download_invoice_block');
-
-      function swapStyleSheet(sheet) {
-        document.getElementById('pagestyle').setAttribute('href', sheet);
-      }
-
-      function formatPageForDownload() {
-        document.getElementById('print_button').onclick = () =>
-          swapStyleSheet('/assets/css/download.css');
-        document.getElementById('print_button').classList.toggle('hide');
-        document.getElementById('print_message').classList.toggle('hide');
-        document.querySelector('.bottom_nav').classList.toggle('blue_bg');
-        document.getElementById('help_button').classList.toggle('hide');
-        document.getElementById('reload_button').classList.toggle('hide');
-      }
-
-      function downloadPdf() {
-        formatPageForDownload();
-
-        html2pdf(invoice, {
-          filename: 'invoice.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { dpi: 300, letterRendering: true },
-          jsPDF: { unit: 'cm', format: 'a4', orientation: 'portrait' },
-        });
-      }
     </script>
   </body>
 </html>
