@@ -30,9 +30,9 @@ Just enter your invoice data and download the invoice PDF.
 
 - download PDF functionality using [html2pdf](https://github.com/eKoopmans/html2pdf)
 
-- guided tour, (feat. keyboard navigation) made using a customised [intro.js](https://github.com/usablica/intro.js) [docs here](http://introjs.com/docs/)
+- GUIDED TOUR | INLINE HELP FOR NEW🐝🐝🐝, (AKA. keyboard navigation feature) made using a customised [intro.js](https://github.com/usablica/intro.js) | [docs here](http://introjs.com/docs/)
 
-### 2DOs:
+### 2DOs Maybe?! :
 
 - improve guided tour using [shepherd](https://github.com/HubSpot/shepherd) or [Trip](https://github.com/EragonJ/Trip.js) or [hopscotch](https://github.com/linkedin/hopscotch) or [anno](https://github.com/iamdanfox/anno.js) or [guider.js](https://github.com/pickhardt/Guiders-JS)
 
